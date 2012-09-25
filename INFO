@@ -1,0 +1,15 @@
+repositories:
+
+  *  /home/insofter/projects/factory
+  *  /home/insofter/projects/scripts
+  *  /home/insofter/projects/icd
+  *  /home/insofter/projects/buildroot
+
+.bashrc:
+  *  source /home/insofter/projects/factory/bash_env.sh
+
+tftp:
+  *  /srv/tftp
+
+groups:
+  *  uucp
