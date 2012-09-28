@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "Do you have tftp server with directory '/srv/tftp' ?"
+echo "Do you have ip set to 192.168.2.200 ?"
+
 if [ "$UID" != 0 ]
 then
   echo "--ERR: Run as root!" ; exit 1
@@ -39,6 +42,9 @@ gpasswd -a ${local_user} uucp
 echo "chown -R ${local_user}:${local_user} /home/insofter"
 chown -R ${local_user}:${local_user} /home/insofter
 
+echo "chown -R ${local_user}:${local_user} /srv/tftp"
+chown -R ${local_user}:${local_user} /srv/tftp
+
 
 su -c "cd /home/insofter/projects && git clone ssh://${cattus_user}@cattus.info/srv/git/buildroot" ${local_user}
 su -c "cd /home/insofter/projects && git clone ssh://${cattus_user}@cattus.info/srv/git/icd" ${local_user}
@@ -46,5 +52,6 @@ su -c "cd /home/insofter/projects && git clone ssh://${cattus_user}@cattus.info/
 su -c "cd /home/insofter/projects && git clone ssh://${cattus_user}@cattus.info/srv/git/factory" ${local_user}
 
 echo "Add 'source /home/insofter/projects/factory/bash_env.sh' to your .bashrc file."
+echo "Read '/home/insofter/projects/factory/INFO' file."
 echo DONE
 
