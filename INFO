@@ -16,3 +16,7 @@ groups:
 
 ip:
   *  192.168.2.200
+
+
+for 64 bit:
+  *  lib32-libxft for sam-ba
