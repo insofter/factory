@@ -51,6 +51,13 @@ su -c "cd /home/insofter/projects && git clone ssh://${cattus_user}@cattus.info/
 su -c "cd /home/insofter/projects && git clone ssh://${cattus_user}@cattus.info/srv/git/scripts" ${local_user}
 su -c "cd /home/insofter/projects && git clone ssh://${cattus_user}@cattus.info/srv/git/factory" ${local_user}
 
+su -c "mkdir /home/insofter/projects/local_icd_compilation" ${local_user}
+su -c "cd /home/insofter/projects/local_icd_compilation && cmake ../icd/ -DCMAKE_CXX_FLAGS='-DDESKTOP' -DCMAKE_C_FLAGS='-DDESKTOP'" ${local_user}
+
+su -c "mkdir /home/insofter/projects/arm_icd_compilation" ${local_user}
+su -c "cd /home/insofter/projects/arm_icd_compilation && echo 'cmake ../icd/ -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_TOOLCHAIN_FILE=../icd/.toolchainfile.cmake' > run_me_if_you_have_cross_compiler.sh && chmod +x run_me_if_you_have_cross_compiler.sh" ${local_user}
+
+
 echo "Add 'source /home/insofter/projects/factory/bash_env.sh' to your .bashrc file."
 echo "Read '/home/insofter/projects/factory/INFO' file."
 echo DONE

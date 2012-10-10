@@ -20,3 +20,11 @@ ip:
 
 for 64 bit:
   *  lib32-libxft for sam-ba
+
+only-icd-compilation:
+  *  projects/local_icd_compilation/
+  *  projects/arm_icd_compilation/
+       (run `run_me_if_you_have_cross_compiler.sh' after first full compilation)
+
+
+
