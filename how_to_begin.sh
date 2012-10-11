@@ -58,6 +58,9 @@ su -c "mkdir /home/insofter/projects/arm_icd_compilation" ${local_user}
 su -c "cd /home/insofter/projects/arm_icd_compilation && echo 'cmake ../icd/ -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_TOOLCHAIN_FILE=../icd/.toolchainfile.cmake' > run_me_if_you_have_cross_compiler.sh && chmod +x run_me_if_you_have_cross_compiler.sh" ${local_user}
 
 su -c "mkdir /home/insofter/projects/data" ${local_user}
+su -c "cp /home/insofter/projects/factory/generate_databases.sh /home/insofter/projects/data/run_me_if_you_want_databases_and_have_compiled_local_icd.sh" ${local_user}
+su -c "chmod +x /home/insofter/projects/data/run_me_if_you_want_databases_and_have_compiled_local_icd.sh" ${local_user}
+
 
 echo "Add 'source /home/insofter/projects/factory/bash_env.sh' to your .bashrc file."
 echo "Read '/home/insofter/projects/factory/INFO' file."
