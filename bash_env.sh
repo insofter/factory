@@ -6,6 +6,7 @@ alias b="cd /home/insofter/projects/buildroot; pwd"
 alias s="cd /home/insofter/projects/scripts; pwd"
 alias i="cd /home/insofter/projects/icd; pwd"
 alias f="cd /home/insofter/projects/factory; pwd"
+alias d="cd /home/insofter/projects/data; pwd"
 
 export EDITOR=/usr/bin/vim
 
@@ -20,3 +21,8 @@ export PATH="${PATH}:/home/insofter/projects/factory/sam-ba"
 
 export PATH="${PATH}:/home/insofter/projects/buildroot/output/host/usr/bin"
 export PATH="${PATH}:/home/insofter/projects/buildroot/output/host/usr/sbin"
+
+
+export ICD_DATA_DB=/home/insofter/projects/data/data.db
+export ICD_CONFIG_DB=/home/insofter/projects/data/config.db
+export ICD_LIVE_DB=/home/insofter/projects/data/live.db
