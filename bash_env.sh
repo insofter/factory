@@ -7,6 +7,8 @@ alias s="cd /home/insofter/projects/scripts; pwd"
 alias i="cd /home/insofter/projects/icd; pwd"
 alias f="cd /home/insofter/projects/factory; pwd"
 alias d="cd /home/insofter/projects/data; pwd"
+alias ac="cd /home/insofter/projects/arm_icd_compilation; pwd; echo -ne '\033]0;ARM_ICD_COMPILATION\007'"
+alias lc="cd /home/insofter/projects/local_icd_compilation; pwd; echo -ne '\033]0;LOCAL_ICD_COMPILATION\007'"
 
 export EDITOR=/usr/bin/vim
 
