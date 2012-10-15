@@ -32,15 +32,17 @@ then
 fi
 echo "++OK: Cattus user correct."
 
-
-echo "mkdir -p /home/insofter/projects"
-mkdir -p /home/insofter/projects
-
 echo "gpasswd -a ${local_user} uucp"
 gpasswd -a ${local_user} uucp
 
-echo "chown -R ${local_user}:${local_user} /home/insofter"
-chown -R ${local_user}:${local_user} /home/insofter
+
+echo "mkdir -p /home/insofter/projects"
+mkdir -p /home/insofter/projects
+echo "chown ${local_user}:${local_user} /home/insofter"
+chown ${local_user}:${local_user} /home/insofter
+echo "chown ${local_user}:${local_user} /home/insofter/projects"
+chown ${local_user}:${local_user} /home/insofter/projects
+
 
 echo "chown -R ${local_user}:${local_user} /srv/tftp"
 chown -R ${local_user}:${local_user} /srv/tftp
