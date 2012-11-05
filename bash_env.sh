@@ -28,3 +28,25 @@ export PATH="${PATH}:/home/insofter/projects/buildroot/output/host/usr/sbin"
 export ICD_DATA_DB=/home/insofter/projects/data/data.db
 export ICD_CONFIG_DB=/home/insofter/projects/data/config.db
 export ICD_LIVE_DB=/home/insofter/projects/data/live.db
+
+sr() {
+  if [ "$1" != "" ]
+  then
+    echo ssh root@192.168.2.$1
+    ssh root@192.168.2.$1
+  else
+    echo ssh root@192.168.2.199
+    ssh root@192.168.2.199
+  fi
+}
+
+sa() {
+  if [ "$1" != "" ]
+  then
+    echo ssh admin@192.168.2.$1
+    ssh admin@192.168.2.$1
+  else
+    echo ssh admin@192.168.2.199
+    ssh admin@192.168.2.199
+  fi
+}
