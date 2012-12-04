@@ -32,8 +32,8 @@ export ICD_LIVE_DB=/home/insofter/projects/data/live.db
 sr() {
   if [ "$1" != "" ]
   then
-    echo ssh root@192.168.2.$1
-    ssh root@192.168.2.$1
+    echo ssh root@192.168.$1
+    ssh root@192.168.$1
   else
     echo ssh root@192.168.2.199
     ssh root@192.168.2.199
@@ -43,8 +43,8 @@ sr() {
 sa() {
   if [ "$1" != "" ]
   then
-    echo ssh admin@192.168.2.$1
-    ssh admin@192.168.2.$1
+    echo ssh admin@192.168.$1
+    ssh admin@192.168.$1
   else
     echo ssh admin@192.168.2.199
     ssh admin@192.168.2.199
