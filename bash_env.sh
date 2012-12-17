@@ -9,6 +9,7 @@ alias f="cd /home/insofter/projects/factory; pwd"
 alias d="cd /home/insofter/projects/data; pwd"
 alias ac="cd /home/insofter/projects/arm_icd_compilation; pwd; echo -ne '\033]0;ARM_ICD_COMPILATION\007'"
 alias lc="cd /home/insofter/projects/local_icd_compilation; pwd; echo -ne '\033]0;LOCAL_ICD_COMPILATION\007'"
+alias skel="cd /home/insofter/projects/buildroot/fs/skeleton-icdtcp3; pwd"
 
 export EDITOR=/usr/bin/vim
 
@@ -28,6 +29,8 @@ export PATH="${PATH}:/home/insofter/projects/buildroot/output/host/usr/sbin"
 export ICD_DATA_DB=/home/insofter/projects/data/data.db
 export ICD_CONFIG_DB=/home/insofter/projects/data/config.db
 export ICD_LIVE_DB=/home/insofter/projects/data/live.db
+
+export ICD_SHARE_DIR=/home/insofter/projects/icd/share/
 
 sr() {
   if [ "$1" != "" ]
