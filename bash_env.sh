@@ -10,6 +10,7 @@ alias d="cd /home/insofter/projects/data; pwd"
 alias ac="cd /home/insofter/projects/arm_icd_compilation; pwd; echo -ne '\033]0;ARM_ICD_COMPILATION\007'"
 alias lc="cd /home/insofter/projects/local_icd_compilation; pwd; echo -ne '\033]0;LOCAL_ICD_COMPILATION\007'"
 alias skel="cd /home/insofter/projects/buildroot/fs/skeleton-icdtcp3; pwd"
+alias gall="/home/insofter/projects/factory/git_for_all.sh"
 
 export EDITOR=/usr/bin/vim
 

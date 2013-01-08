@@ -35,6 +35,10 @@ do
           fi
 
           ;;
+        log)
+          git log --graph --oneline -3
+          ;;
+
 
         *)
           git status
