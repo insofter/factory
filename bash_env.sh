@@ -26,6 +26,8 @@ export PATH="${PATH}:/home/insofter/projects/factory/sam-ba"
 export PATH="${PATH}:/home/insofter/projects/buildroot/output/host/usr/bin"
 export PATH="${PATH}:/home/insofter/projects/buildroot/output/host/usr/sbin"
 
+export PATH="${PATH}:/home/insofter/projects/local_icd_compilation/src"
+
 
 export ICD_DATA_DB=/home/insofter/projects/data/data.db
 export ICD_CONFIG_DB=/home/insofter/projects/data/config.db
