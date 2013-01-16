@@ -60,6 +60,7 @@ su -c "mkdir /home/insofter/projects/arm_icd_compilation" ${local_user}
 su -c "cd /home/insofter/projects/arm_icd_compilation && echo 'cmake ../icd/ -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_TOOLCHAIN_FILE=../icd/.toolchainfile.cmake' > run_me_if_you_have_cross_compiler.sh && chmod +x run_me_if_you_have_cross_compiler.sh" ${local_user}
 
 su -c "mkdir /home/insofter/projects/data" ${local_user}
+chmod 777 /home/insofter/projects/data #for apache etc
 su -c "cp /home/insofter/projects/factory/generate_databases.sh /home/insofter/projects/data/run_me_if_you_want_databases_and_have_compiled_local_icd.sh" ${local_user}
 su -c "chmod +x /home/insofter/projects/data/run_me_if_you_want_databases_and_have_compiled_local_icd.sh" ${local_user}
 
