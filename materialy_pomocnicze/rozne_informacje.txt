@@ -1,0 +1,34 @@
+zmiana konfiguracji:
+    make menuconfig
+    make savedefconfig 
+    cp buildroot/configs/icdtcp3_defconfig
+
+    make icdtcp3_defconfig
+
+
+zmiany w icd:
+    commit [zm. w buildroocie, make menuconfig]
+    git describe
+    
+    make-package (make package)
+    make-target (./make-target.sh)
+
+
+po kompilacji calosci:
+    make relpkg
+    make updpkg
+
+
+prawa dostępu:
+    buildroot/target/generic/
+      device_table-icdtcp3.txt
+
+
+gets:
+    vi ./output/build/host-m4-1.4.15/
+      lib/stdio.in.h
+
+
+mac:
+    tcpip:mac:00:1C:D3:00:00:00
+    printf(%2X), scanf(%x) 
