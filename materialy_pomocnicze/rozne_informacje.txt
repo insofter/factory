@@ -32,3 +32,10 @@ gets:
 mac:
     tcpip:mac:00:1C:D3:00:00:00
     printf(%2X), scanf(%x) 
+
+
+git tag:
+    git tag
+    git tag -a v0.4 -m 'Basic funcionality (release candidate)'
+    git push origin --tags
+
