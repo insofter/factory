@@ -1,9 +1,9 @@
 zmiana konfiguracji:
+    make icdtcp3_defconfig
+
     make menuconfig
     make savedefconfig 
-    cp buildroot/configs/icdtcp3_defconfig
-
-    make icdtcp3_defconfig
+    cp defconfig buildroot/configs/icdtcp3_defconfig
 
 
 zmiany w icd:
