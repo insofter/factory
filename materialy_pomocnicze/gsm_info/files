@@ -1,0 +1,21 @@
+usb_modeswitch
+# Huawei E1692
+DefaultVendor=  0x12d1
+DefaultProduct= 0x1446
+TargetVendor=   0x12d1
+TargetProduct=  0x140c
+MessageContent="55534243000000000000000000000011060000000000000000000000000000"
+CheckSuccess=5
+
+pppd
+debug
+show-password
+connect "/usr/bin/chat '' AT '' ATZ '' AT+CPIN=3144 OK 'AT+CGDCONT=1,\"IP\",\"internet\",\"\",0,0' OK ATDT*99# CONNECT ''"
+/dev/ttyUSB0
+115200
+defaultroute
+noipdefault
+user "ppp"
+remotename plus
+ipparam plus
+usepeerdns
