@@ -33,7 +33,7 @@ export ICD_DATA_DB=/home/insofter/projects/data/data.db
 export ICD_CONFIG_DB=/home/insofter/projects/data/config.db
 export ICD_LIVE_DB=/home/insofter/projects/data/live.db
 
-export ICD_SHARE_DIR=/home/insofter/projects/icd/share/
+export ICD_SHARE_DIR=/home/insofter/projects/icd/share
 
 sr() {
   if [ "$1" != "" ]
