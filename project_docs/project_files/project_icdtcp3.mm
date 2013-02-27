@@ -20,69 +20,7 @@
 </html></richcontent>
 <edge COLOR="#808080" STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
-<node COLOR="#00b439" CREATED="1361955705250" ID="ID_130991821" MODIFIED="1361977275567" STYLE="bubble" TEXT="/home/data/">
-<edge COLOR="#808080" STYLE="bezier" WIDTH="thin"/>
-<font NAME="SansSerif" SIZE="16"/>
-<attribute_layout NAME_WIDTH="33" VALUE_WIDTH="33"/>
-<node COLOR="#990000" CREATED="1361956156373" ID="ID_1172743165" MODIFIED="1361977275568" STYLE="bubble" TEXT="SQLite3">
-<edge COLOR="#808080"/>
-<font NAME="SansSerif" SIZE="14"/>
-<node COLOR="#111111" CREATED="1361955728433" ID="ID_251290198" MODIFIED="1361977275569" STYLE="bubble" TEXT="config.db">
-<richcontent TYPE="NOTE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      Baza danych przechowuj&#261;ca konfiguracj&#281;.
-    </p>
-  </body>
-</html></richcontent>
-<edge COLOR="#808080"/>
-<font NAME="SansSerif" SIZE="12"/>
-</node>
-<node COLOR="#111111" CREATED="1361955717709" ID="ID_1086714611" MODIFIED="1361977275569" STYLE="bubble" TEXT="data.db">
-<richcontent TYPE="NOTE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      Baza danych przechowuj&#261;ca wyniki zliczania.
-    </p>
-  </body>
-</html></richcontent>
-<edge COLOR="#808080"/>
-<font NAME="SansSerif" SIZE="12"/>
-</node>
-</node>
-</node>
-<node COLOR="#00b439" CREATED="1361973057522" ID="ID_1213660170" MODIFIED="1361977275562" STYLE="bubble" TEXT="/tmp/">
-<edge COLOR="#808080" STYLE="bezier" WIDTH="thin"/>
-<font NAME="SansSerif" SIZE="16"/>
-<node COLOR="#990000" CREATED="1361973067837" ID="ID_829267022" MODIFIED="1361977275563" STYLE="bubble" TEXT="SQLite3">
-<edge COLOR="#808080"/>
-<font NAME="SansSerif" SIZE="14"/>
-<node COLOR="#111111" CREATED="1361973073369" ID="ID_426197472" MODIFIED="1361977275563" STYLE="bubble" TEXT="live.db">
-<richcontent TYPE="NOTE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      Baza w pami&#281;ci RAM.
-    </p>
-    <p>
-      Baza przechowuje bie&#380;&#261;ce wyniki, kt&#243;re s&#261; kopiowane przez icd-flush-db do bazy w pami&#281;ci flash.
-    </p>
-  </body>
-</html></richcontent>
-<edge COLOR="#808080"/>
-<font NAME="SansSerif" SIZE="12"/>
-</node>
-</node>
-</node>
-<node COLOR="#00b439" CREATED="1361959173730" ID="ID_1188269369" MODIFIED="1361977275556" STYLE="bubble" TEXT="/etc/init.d/rcS">
+<node COLOR="#00b439" CREATED="1361959173730" ID="ID_1188269369" MODIFIED="1361993156771" STYLE="bubble" TEXT="/etc/init.d/rcS">
 <edge COLOR="#808080" STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
 <node COLOR="#990000" CREATED="1361951391991" ID="ID_15166884" MODIFIED="1361989579326" STYLE="bubble" TEXT="S40icd">
@@ -296,6 +234,68 @@
 </node>
 </node>
 </node>
+<node COLOR="#00b439" CREATED="1361955705250" ID="ID_130991821" MODIFIED="1361977275567" STYLE="bubble" TEXT="/home/data/">
+<edge COLOR="#808080" STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<attribute_layout NAME_WIDTH="33" VALUE_WIDTH="33"/>
+<node COLOR="#990000" CREATED="1361956156373" ID="ID_1172743165" MODIFIED="1361977275568" STYLE="bubble" TEXT="SQLite3">
+<edge COLOR="#808080"/>
+<font NAME="SansSerif" SIZE="14"/>
+<node COLOR="#111111" CREATED="1361955728433" ID="ID_251290198" MODIFIED="1361977275569" STYLE="bubble" TEXT="config.db">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Baza danych przechowuj&#261;ca konfiguracj&#281;.
+    </p>
+  </body>
+</html></richcontent>
+<edge COLOR="#808080"/>
+<font NAME="SansSerif" SIZE="12"/>
+</node>
+<node COLOR="#111111" CREATED="1361955717709" ID="ID_1086714611" MODIFIED="1361977275569" STYLE="bubble" TEXT="data.db">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Baza danych przechowuj&#261;ca wyniki zliczania.
+    </p>
+  </body>
+</html></richcontent>
+<edge COLOR="#808080"/>
+<font NAME="SansSerif" SIZE="12"/>
+</node>
+</node>
+</node>
+<node COLOR="#00b439" CREATED="1361973057522" ID="ID_1213660170" MODIFIED="1361977275562" STYLE="bubble" TEXT="/tmp/">
+<edge COLOR="#808080" STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<node COLOR="#990000" CREATED="1361973067837" ID="ID_829267022" MODIFIED="1361977275563" STYLE="bubble" TEXT="SQLite3">
+<edge COLOR="#808080"/>
+<font NAME="SansSerif" SIZE="14"/>
+<node COLOR="#111111" CREATED="1361973073369" ID="ID_426197472" MODIFIED="1361977275563" STYLE="bubble" TEXT="live.db">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Baza w pami&#281;ci RAM.
+    </p>
+    <p>
+      Baza przechowuje bie&#380;&#261;ce wyniki, kt&#243;re s&#261; kopiowane przez icd-flush-db do bazy w pami&#281;ci flash.
+    </p>
+  </body>
+</html></richcontent>
+<edge COLOR="#808080"/>
+<font NAME="SansSerif" SIZE="12"/>
+</node>
+</node>
+</node>
 </node>
 <node COLOR="#0033ff" CREATED="1361956211817" ID="ID_241742111" MODIFIED="1361990490029" POSITION="right" STYLE="bubble" TEXT="elektronika">
 <richcontent TYPE="NOTE"><html>
@@ -379,16 +379,212 @@
 </node>
 </node>
 </node>
-<node COLOR="#0033ff" CREATED="1361990322439" ID="ID_835665368" MODIFIED="1361990952131" POSITION="left" TEXT="           &apos;how_to_begin.sh&apos; &#xa;czyli jak zacz&#x105;&#x107; prac&#x119; z projektem">
+<node COLOR="#0033ff" CREATED="1361990322439" ID="ID_835665368" MODIFIED="1361991811279" POSITION="left" TEXT="           &apos;how_to_begin.sh&apos; &#xa;czyli jak zacz&#x105;&#x107; prac&#x119; z projektem">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
+<node COLOR="#00b439" CREATED="1361991567243" ID="ID_1597294584" MODIFIED="1361992561298" TEXT="pobranie projektu">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Do pracy z projektem potrzebny jest komputer z systemem Linux i uprawnienami roota.
+    </p>
+    <p>
+      Nale&#380;y pobra&#263; skrypt <u>https://www.cattus.info/files/how_to_begin.sh</u>&#160;i uruchomi&#263; go.
+    </p>
+    <p>
+      Nast&#281;pnie wykona&#263; kroki podawane przez skrypt.
+    </p>
+    <p>
+      Po pobraniu projektu i skonfigurowaniu systemu uprawnienia roota nie b&#281;d&#261; wi&#281;cej potrzebne.
+    </p>
+  </body>
+</html>
+</richcontent>
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<icon BUILTIN="full-1"/>
+</node>
+<node COLOR="#00b439" CREATED="1361991578658" ID="ID_249111711" MODIFIED="1361992523114" TEXT="kompilacja">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Kompilacj&#281; lokaln&#261; mo&#380;na wykona&#263; skryptem {factory}/night.sh.
+    </p>
+    <p>
+      Je&#347;li u&#380;ytkownik ma uprawnienia do wykonywania polecenia
+    </p>
+    <p>
+      sudo -n shutdown -h now, to za pomoc&#261; night-poweroff.sh mo&#380;e
+    </p>
+    <p>
+      ustawi&#263; automatyczne wy&#322;&#261;czenie komputera po zako&#324;czeniu.
+    </p>
+  </body>
+</html>
+</richcontent>
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<icon BUILTIN="full-2"/>
+</node>
+<node COLOR="#00b439" CREATED="1361991592171" ID="ID_1705591639" MODIFIED="1361992619568" TEXT="zaprogramowanie modu&#x142;u">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Zaprogramowanie modu&#322;u nale&#380;y wykona&#263; na podstawie instrukcji
+    </p>
+    <p>
+      https://www.cattus.info/wiki/FactoryProgramming.
+    </p>
+  </body>
+</html>
+</richcontent>
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<icon BUILTIN="full-3"/>
+</node>
+<node COLOR="#00b439" CREATED="1361991625626" ID="ID_400248337" MODIFIED="1361992777572" TEXT="&#x15b;rodowisko lokalne">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Projekt zosta&#322; umieszczony w katalogu /home/insofter/projects.
+    </p>
+    <p>
+      Poza repozytoriami dost&#281;pne s&#261; katalogi kompilacji:
+    </p>
+    <p>
+      * arm_icd_compilation/
+    </p>
+    <p>
+      * local_icd_compilation/
+    </p>
+    <p>
+      oraz katalog data/ w kt&#243;rym mo&#380;na stworzy&#263; bazy danych, takie jak na urz&#261;dzeniu.
+    </p>
+  </body>
+</html>
+</richcontent>
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<icon BUILTIN="full-4"/>
+</node>
 </node>
 <node COLOR="#0033ff" CREATED="1361989830384" ID="ID_217124938" MODIFIED="1361990930483" POSITION="left" TEXT="repozytoria&#xa;  projektu">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
-<node COLOR="#00b439" CREATED="1361989843447" ID="ID_1572180523" MODIFIED="1361989862881" TEXT="buildroot">
+<node COLOR="#00b439" CREATED="1361989843447" ID="ID_1572180523" MODIFIED="1361995240418" TEXT="buildroot">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Repozytorium zawiera wszystko potrzebne do stworzenia obrazu systemu,
+    </p>
+    <p>
+      w tym odno&#347;niki do innych repozytori&#243;w (icd dost&#281;pnego lokalnie, a innych serwera).
+    </p>
+  </body>
+</html>
+</richcontent>
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
+<node COLOR="#990000" CREATED="1361994205003" ID="ID_93946501" MODIFIED="1361995275122" TEXT="make menuconfig">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Uruchamia graficzn&#261; konfiguracj&#281;.
+    </p>
+  </body>
+</html>
+</richcontent>
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+<node COLOR="#990000" CREATED="1361994198019" ID="ID_853953599" MODIFIED="1361995360962" TEXT="make newicd">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Ustawia najnowszy commit z lokalnego repozytorium icd na u&#380;ywany przy kompilacji.
+    </p>
+    <p>
+      Nalezy uruchomi&#263; po wykonaniu poprawek w icd.
+    </p>
+  </body>
+</html>
+</richcontent>
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+<node COLOR="#990000" CREATED="1361995244954" ID="ID_714174932" MODIFIED="1361995631621" TEXT="make">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Uruchamia kompilacj&#281;.
+    </p>
+    <p>
+      Dla glibc 2.17-3 i nowszych pojawia si&#281; b&#322;&#261;d zwi&#261;zany z u&#380;yciem
+    </p>
+    <p>
+      funkcji gets(). Nalezy kompilowa&#263; przez {factory}/night.sh lub na serwerze.
+    </p>
+  </body>
+</html>
+</richcontent>
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+<node COLOR="#990000" CREATED="1361994151707" ID="ID_604775108" MODIFIED="1361995669686" TEXT="fs/skeleton-icdtcp3/">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Szkielet systemu. Wszystkie pliki znajduj&#261;c&#281; si&#281; w tym folderze zostan&#261; przekopiowane
+    </p>
+    <p>
+      do obrazu systemu.
+    </p>
+  </body>
+</html>
+</richcontent>
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+<node COLOR="#990000" CREATED="1361994260075" ID="ID_1567973" MODIFIED="1361995830926" TEXT="__outputs">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Zawiera katalogi ze starymi kompilacjami. Mo&#380;na/nale&#380;y usuwa&#263;, gdy&#380; ka&#380;dy zajmuje ok 3,5GB.
+    </p>
+    <p>
+      Bie&#380;&#261;ca kompilacja znajduje si&#281; w output, razem z kompilatorem u&#380;ywanym przy arm_icd_compilation.
+    </p>
+  </body>
+</html>
+</richcontent>
+<font NAME="SansSerif" SIZE="14"/>
+</node>
 </node>
 <node COLOR="#00b439" CREATED="1361989874927" ID="ID_1242004422" MODIFIED="1361989879935" TEXT="icd">
 <edge STYLE="bezier" WIDTH="thin"/>
@@ -410,20 +606,121 @@
 <node COLOR="#0033ff" CREATED="1361990113455" ID="ID_1321429431" MODIFIED="1361990942115" POSITION="left" TEXT="    repozytoria&#xa;&#x15b;rodowiska pracy">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
-<node COLOR="#00b439" CREATED="1361989884783" ID="ID_1979515212" MODIFIED="1361989892823" TEXT="scripts">
+<node COLOR="#00b439" CREATED="1361989884783" ID="ID_1979515212" MODIFIED="1361992984337" TEXT="scripts">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Skrypty s&#322;u&#380;&#261;ce do programowania modu&#322;u.
+    </p>
+  </body>
+</html>
+</richcontent>
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
-<node COLOR="#990000" CREATED="1361990233447" ID="ID_846327775" MODIFIED="1361990239629" TEXT="icdtcp3-flash.sh">
+<node COLOR="#990000" CREATED="1361990233447" ID="ID_846327775" MODIFIED="1361995024748" TEXT="icdtcp3-flash.sh">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Skrypt wgrywa obraz systemu na modu&#322;.
+    </p>
+  </body>
+</html>
+</richcontent>
 <font NAME="SansSerif" SIZE="14"/>
 </node>
 </node>
-<node COLOR="#00b439" CREATED="1361989866623" ID="ID_830333123" MODIFIED="1361989871295" TEXT="factory">
+<node COLOR="#00b439" CREATED="1361989866623" ID="ID_830333123" MODIFIED="1361993009704" TEXT="factory">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Skrypty u&#322;atwiaj&#261;ce prac&#281;.
+    </p>
+    <p>
+      Nale&#380;y przeczyta&#263; INFO.
+    </p>
+  </body>
+</html>
+</richcontent>
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
+<node COLOR="#990000" CREATED="1361993009705" ID="ID_514329438" MODIFIED="1361993066051" TEXT="INFO">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Informacje o konfiguracji &#347;rodowiska, kt&#243;ra nie zosta&#322;a wykonana przez skrypt.
+    </p>
+  </body>
+</html>
+</richcontent>
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+<node COLOR="#990000" CREATED="1361990285615" ID="ID_432970373" MODIFIED="1361993022102" TEXT="bash_env">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Do w&#322;asnego .bashrc nalezy doda&#263; lini&#281;
+    </p>
+    <p>
+      source /home/insofter/projects/factory/bash_env.sh,
+    </p>
+    <p>
+      aby by&#322;y dost&#281;pne wszystkie zmienne &#347;rodowiska.
+    </p>
+  </body>
+</html>
+</richcontent>
+<font NAME="SansSerif" SIZE="14"/>
+</node>
 <node COLOR="#990000" CREATED="1361990280327" ID="ID_1660220833" MODIFIED="1361990283733" TEXT="project_docs/">
 <font NAME="SansSerif" SIZE="14"/>
+<node COLOR="#111111" CREATED="1361994811995" ID="ID_1444870573" MODIFIED="1361994978475" TEXT="THIS document (project_icdtcp3.mm)">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Ten dokument zosta&#322; stworzony programem FreeMind, dost&#281;pnym na licencji GNU GPL V2+.
+    </p>
+    <p>
+      http://freemind.sourceforge.net/wiki/index.php/Main_Page
+    </p>
+  </body>
+</html>
+</richcontent>
 </node>
-<node COLOR="#990000" CREATED="1361990285615" ID="ID_432970373" MODIFIED="1361990308173" TEXT="bash_env">
+</node>
+<node COLOR="#990000" CREATED="1361991442796" ID="ID_573186179" MODIFIED="1361991816189" TEXT="how_to_begin.sh">
+<arrowlink DESTINATION="ID_1597294584" ENDARROW="Default" ENDINCLINATION="321;0;" ID="Arrow_ID_1273918037" STARTARROW="None" STARTINCLINATION="321;0;"/>
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+<node COLOR="#990000" CREATED="1361995395907" ID="ID_937614028" MODIFIED="1361995440242" TEXT="night.sh">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Kompilacja
+    </p>
+  </body>
+</html>
+</richcontent>
 <font NAME="SansSerif" SIZE="14"/>
 </node>
 </node>
