@@ -297,8 +297,7 @@
       Modyfikacj&#281; nale&#380;u zacz&#261;&#263; od zapoznania si&#281; z indeksem, co pozwoli &#322;atwo znale&#378;c potrzebne pliki.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <edge COLOR="#808080"/>
 </node>
 <node COLOR="#111111" CREATED="1361955947717" ID="ID_435289127" MODIFIED="1361977275529" STYLE="bubble" TEXT="Raporty (inc/wyniki_*.php)">
@@ -490,7 +489,7 @@
 <node COLOR="#0033ff" CREATED="1361990322439" ID="ID_835665368" MODIFIED="1362139087568" POSITION="left" TEXT="           &apos;how_to_begin.sh&apos; &#xa;czyli jak zacz&#x105;&#x107; prac&#x119; z projektem">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
-<node COLOR="#00b439" CREATED="1361991567243" ID="ID_1597294584" MODIFIED="1362066629919" TEXT="pobranie projektu">
+<node COLOR="#00b439" CREATED="1361991567243" ID="ID_1597294584" MODIFIED="1362159922867" TEXT="pobranie projektu">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -498,6 +497,12 @@
   <body>
     <p>
       Do pracy z projektem potrzebny jest komputer z systemem Linux i uprawnienami roota.
+    </p>
+    <p>
+      Nale&#380;y zainstalowa&#263; pakiety git i cmake.
+    </p>
+    <p>
+      Inne pakiety b&#281;d&#261; potrzebne dopiero podczas instalacji.
     </p>
     <p>
       Nale&#380;y pobra&#263; skrypt <u>https://www.cattus.info/files/how_to_begin.sh</u>&#160;i uruchomi&#263; go.
@@ -514,7 +519,7 @@
 <font NAME="SansSerif" SIZE="16"/>
 <icon BUILTIN="full-1"/>
 </node>
-<node COLOR="#00b439" CREATED="1361991578658" ID="ID_249111711" MODIFIED="1362066630003" TEXT="kompilacja">
+<node COLOR="#00b439" CREATED="1361991578658" ID="ID_249111711" MODIFIED="1362161586855" TEXT="kompilacja">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -532,8 +537,15 @@
     <p>
       ustawi&#263; automatyczne wy&#322;&#261;czenie komputera po zako&#324;czeniu.
     </p>
+    <p>
+      Na pocz&#261;tku mog&#261; pojawia&#263; si&#281; informacje o brakuj&#261;cych pakietach, wtedy nale&#380;y je zainstalowa&#263;
+    </p>
+    <p>
+      i uruchomi&#263; kompilacj&#281; po raz kolejny.
+    </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
 <icon BUILTIN="full-2"/>
@@ -596,8 +608,7 @@
       W katalogu {factory}/materialy_pomocnicze sa zgromadzone r&#243;&#380;ne informacje, kt&#243;re mog&#261; by&#263; przydatne.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
 <icon BUILTIN="full-5"/>
@@ -668,8 +679,7 @@
       funkcji gets(). Nalezy kompilowa&#263; przez {factory}/night.sh lub na serwerze.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <font NAME="SansSerif" SIZE="14"/>
 </node>
 <node COLOR="#990000" CREATED="1361994151707" ID="ID_604775108" MODIFIED="1362066630191" TEXT="fs/skeleton-icdtcp3/">
@@ -701,8 +711,7 @@
       Bie&#380;&#261;ca kompilacja znajduje si&#281; w output, razem z kompilatorem u&#380;ywanym przy arm_icd_compilation.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <font NAME="SansSerif" SIZE="14"/>
 </node>
 </node>
@@ -958,8 +967,7 @@
       &#160;&#160;&#160;&#160;&#160;THIS document<br />(project_icdtcp3.mm)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <richcontent TYPE="NOTE"><html>
   <head>
     

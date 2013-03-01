@@ -1,10 +1,11 @@
 For working with WWW do as following, on your local machine:
 
-1. make symlink for /home/insofter/projects/icd/www
+1. Make symlink for /home/insofter/projects/icd/www
     ie:
       ln -s /home/insofter/projects/icd/www ~/public_html/icd
 
-2. add /etc/profile.d/icd.sh file with permissions to read:
+
+2. Add /etc/profile.d/icd.sh file with permissions to read:
     export ICD_DATA_DB=/home/insofter/projects/data/data.db
     export ICD_CONFIG_DB=/home/insofter/projects/data/config.db
     export ICD_LIVE_DB=/home/insofter/projects/data/live.db
@@ -12,9 +13,18 @@ For working with WWW do as following, on your local machine:
     export ICD_SHARE_DIR=/usr/share/icd
     export ICD_DATA_DIR=/home/insofter/projects/data
 
-3. add '/etc/profile.d/' 'to open_basedir=' in /etc/php/php.ini
+3. Add '/etc/profile.d/' 'to open_basedir=' in /etc/php/php.ini
     ie: 
       open_basedir = /srv/http/:/home/:/tmp/:/usr/share/pear/:/var/log/:/etc/profile.d/
 
 Points 2 and 3 are needed because lighttppd denied to work with environment variables.
+
+
+4. For developing WiFi apache needs to run wpa_cli, and needs to do it by sudo.
+    Example sudoers configuration:
+      User_Alias HT=http
+      Cmnd_Alias WPA=/usr/sbin/wpa_cli
+      HT ALL=NOPASSWD:WPA
+
+   Icd-wifi-daemon shoud be run by root.
 

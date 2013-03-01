@@ -18,6 +18,17 @@ groups:
 ip:
   *  192.168.2.200
 
+non standard packages, needed by compilation:
+  *  open_ssh
+  *  git
+  *  wget
+  *  cmake
+  *  make
+  *  cpio
+  *  python
+  *  unzip
+  *  rsync
+  *  svn
 
 for 64 bit:
   *  lib32-libxft for sam-ba

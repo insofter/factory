@@ -38,35 +38,56 @@ gpasswd -a ${local_user} uucp
 
 echo "mkdir -p /home/insofter/projects"
 mkdir -p /home/insofter/projects
-echo "chown ${local_user}:${local_user} /home/insofter"
-chown ${local_user}:${local_user} /home/insofter
-echo "chown ${local_user}:${local_user} /home/insofter/projects"
-chown ${local_user}:${local_user} /home/insofter/projects
+echo "chown ${local_user} /home/insofter"
+chown ${local_user} /home/insofter
 
-
+mkdir -p /srv/tftp
+echo "mkdir -p /srv/tftp"
 echo "chown -R ${local_user}:${local_user} /srv/tftp"
 chown -R ${local_user}:${local_user} /srv/tftp
 
+echo
 
-su -c "cd /home/insofter/projects && git clone ssh://${cattus_user}@cattus.info/srv/git/buildroot" ${local_user}
-su -c "cd /home/insofter/projects && git clone ssh://${cattus_user}@cattus.info/srv/git/icd" ${local_user}
-su -c "cd /home/insofter/projects && git clone ssh://${cattus_user}@cattus.info/srv/git/scripts" ${local_user}
-su -c "cd /home/insofter/projects && git clone ssh://${cattus_user}@cattus.info/srv/git/factory" ${local_user}
+echo "Add 'export CATTUS_USER="${cattus_user}"' to your normal user .bashrc file."
+echo "It's needed before source {factory}/bash_env.sh"
+echo "Add 'source /home/insofter/projects/factory/bash_env.sh' to your normal user .bashrc file."
 
-su -c "mkdir /home/insofter/projects/local_icd_compilation" ${local_user}
-su -c "cd /home/insofter/projects/local_icd_compilation && cmake ../icd/ -DCMAKE_CXX_FLAGS='-DDESKTOP' -DCMAKE_C_FLAGS='-DDESKTOP'" ${local_user}
+cat << HOW_TO_BEGIN_STAGE_II > /home/insofter/projects/how_to_begin_stage_II.sh
+#!/bin/bash
+if [ "\$UID" = 0 ]
+then
+  echo "--ERR: Run as normal user!" ; exit 1
+fi
 
-su -c "mkdir /home/insofter/projects/arm_icd_compilation" ${local_user}
-su -c "cd /home/insofter/projects/arm_icd_compilation && echo 'cmake ../icd/ -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_TOOLCHAIN_FILE=../icd/.toolchainfile.cmake' > run_me_if_you_have_cross_compiler.sh && chmod +x run_me_if_you_have_cross_compiler.sh" ${local_user}
+mkdir -p /home/insofter/projects
+cd /home/insofter/projects
 
-su -c "mkdir /home/insofter/projects/data" ${local_user}
+git clone ssh://\${CATTUS_USER}@cattus.info/srv/git/buildroot
+git clone ssh://\${CATTUS_USER}@cattus.info/srv/git/icd
+git clone ssh://\${CATTUS_USER}@cattus.info/srv/git/scripts
+git clone ssh://\${CATTUS_USER}@cattus.info/srv/git/factory
+
+
+mkdir -p /home/insofter/projects/local_icd_compilation
+cd /home/insofter/projects/local_icd_compilation 
+cmake ../icd/ -DCMAKE_CXX_FLAGS='-DDESKTOP' -DCMAKE_C_FLAGS='-DDESKTOP'
+
+mkdir -p /home/insofter/projects/arm_icd_compilation
+cd /home/insofter/projects/arm_icd_compilation 
+echo 'cmake ../icd/ -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_TOOLCHAIN_FILE=../icd/.toolchainfile.cmake' > run_me_if_you_have_cross_compiler.sh
+chmod +x run_me_if_you_have_cross_compiler.sh
+
+mkdir -p /home/insofter/projects/data
 chmod 777 /home/insofter/projects/data #for apache etc
-su -c "cp /home/insofter/projects/factory/generate_databases.sh /home/insofter/projects/data/run_me_if_you_want_databases_and_have_compiled_local_icd.sh" ${local_user}
-su -c "chmod +x /home/insofter/projects/data/run_me_if_you_want_databases_and_have_compiled_local_icd.sh" ${local_user}
+cp /home/insofter/projects/factory/generate_databases.sh /home/insofter/projects/data/run_me_if_you_want_databases_and_have_compiled_local_icd.sh
+chmod +x /home/insofter/projects/data/run_me_if_you_want_databases_and_have_compiled_local_icd.sh
 
 
-echo "Add 'export CATTUS_USER="${cattus_user}"' to your .bashrc file. It's needed before source ~~ /bash_env.sh"
-echo "Add 'source /home/insofter/projects/factory/bash_env.sh' to your .bashrc file."
-echo "Read '/home/insofter/projects/factory/INFO' file."
+echo "Read '/home/insofter/projects/factory/INFO' file and install listed packages."
+echo DONE
+HOW_TO_BEGIN_STAGE_II
+
+chmod +x /home/insofter/projects/how_to_begin_stage_II.sh
+echo "Next run /home/insofter/projects/how_to_begin_stage_II.sh, as your user."
 echo DONE
 
