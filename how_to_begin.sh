@@ -65,6 +65,7 @@ su -c "cp /home/insofter/projects/factory/generate_databases.sh /home/insofter/p
 su -c "chmod +x /home/insofter/projects/data/run_me_if_you_want_databases_and_have_compiled_local_icd.sh" ${local_user}
 
 
+echo "Add 'export CATTUS_USER="${cattus_user}"' to your .bashrc file. It's needed before source ~~ /bash_env.sh"
 echo "Add 'source /home/insofter/projects/factory/bash_env.sh' to your .bashrc file."
 echo "Read '/home/insofter/projects/factory/INFO' file."
 echo DONE

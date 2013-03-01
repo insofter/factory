@@ -196,8 +196,7 @@
       Synchronizuje konfiguracj&#281; w pliku /tmp/wpa_suppl.conf i w bazie config.db.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <edge COLOR="#808080"/>
 <font NAME="SansSerif" SIZE="12"/>
 </node>
@@ -279,7 +278,7 @@
 <node COLOR="#111111" CREATED="1361955559131" ID="ID_72264620" MODIFIED="1362065025752" STYLE="bubble" TEXT="PHP (/var/www/)">
 <edge COLOR="#808080"/>
 <font NAME="SansSerif" SIZE="12"/>
-<node COLOR="#111111" CREATED="1361958791266" ID="ID_1592856150" MODIFIED="1362066629635" STYLE="bubble" TEXT="index.php">
+<node COLOR="#111111" CREATED="1361958791266" ID="ID_1592856150" MODIFIED="1362140332753" STYLE="bubble" TEXT="index.php">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -294,8 +293,12 @@
     <p>
       Pozosta&#322;e pliki dostarczaj&#261; interfejsy.
     </p>
+    <p>
+      Modyfikacj&#281; nale&#380;u zacz&#261;&#263; od zapoznania si&#281; z indeksem, co pozwoli &#322;atwo znale&#378;c potrzebne pliki.
+    </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <edge COLOR="#808080"/>
 </node>
 <node COLOR="#111111" CREATED="1361955947717" ID="ID_435289127" MODIFIED="1361977275529" STYLE="bubble" TEXT="Raporty (inc/wyniki_*.php)">
@@ -469,8 +472,22 @@
 </node>
 </node>
 </node>
+<node COLOR="#00b439" CREATED="1362138044081" ID="ID_800306751" MODIFIED="1362138071405" TEXT="Zworka USR">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Prze&#322;&#261;cza mikroprocesor w tryb programowania.
+    </p>
+  </body>
+</html></richcontent>
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
 </node>
-<node COLOR="#0033ff" CREATED="1361990322439" ID="ID_835665368" MODIFIED="1361998308295" POSITION="left" TEXT="           &apos;how_to_begin.sh&apos; &#xa;czyli jak zacz&#x105;&#x107; prac&#x119; z projektem">
+</node>
+<node COLOR="#0033ff" CREATED="1361990322439" ID="ID_835665368" MODIFIED="1362139087568" POSITION="left" TEXT="           &apos;how_to_begin.sh&apos; &#xa;czyli jak zacz&#x105;&#x107; prac&#x119; z projektem">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 <node COLOR="#00b439" CREATED="1361991567243" ID="ID_1597294584" MODIFIED="1362066629919" TEXT="pobranie projektu">
@@ -566,12 +583,31 @@
 <font NAME="SansSerif" SIZE="16"/>
 <icon BUILTIN="full-4"/>
 </node>
+<node COLOR="#00b439" CREATED="1362139088466" ID="ID_83905103" MODIFIED="1362139595248" TEXT="opcjonalna konfiguracja">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Dodatkowa konfiguracja jest opisana w pliku {factory}/OPTIONAL_LOCAL_CFG
+    </p>
+    <p>
+      W katalogu {factory}/materialy_pomocnicze sa zgromadzone r&#243;&#380;ne informacje, kt&#243;re mog&#261; by&#263; przydatne.
+    </p>
+  </body>
+</html>
+</richcontent>
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<icon BUILTIN="full-5"/>
+</node>
 </node>
 <node COLOR="#0033ff" CREATED="1361989830384" ID="ID_217124938" MODIFIED="1361998361472" POSITION="left" TEXT="repozytoria&#xa;  projektu">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <arrowlink COLOR="#ffd700" DESTINATION="ID_546530039" ENDARROW="Default" ENDINCLINATION="350;0;" ID="Arrow_ID_1281355675" STARTARROW="None" STARTINCLINATION="350;0;"/>
 <font NAME="SansSerif" SIZE="18"/>
-<node COLOR="#00b439" CREATED="1361989843447" ID="ID_1572180523" MODIFIED="1362066630120" TEXT="buildroot">
+<node COLOR="#00b439" CREATED="1361989843447" ID="ID_1572180523" MODIFIED="1362137967916" TEXT="buildroot">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -616,7 +652,7 @@
 </html></richcontent>
 <font NAME="SansSerif" SIZE="14"/>
 </node>
-<node COLOR="#990000" CREATED="1361995244954" ID="ID_714174932" MODIFIED="1362066630172" TEXT="make">
+<node COLOR="#990000" CREATED="1361995244954" ID="ID_714174932" MODIFIED="1362139073007" TEXT="make">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -632,7 +668,8 @@
       funkcji gets(). Nalezy kompilowa&#263; przez {factory}/night.sh lub na serwerze.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <font NAME="SansSerif" SIZE="14"/>
 </node>
 <node COLOR="#990000" CREATED="1361994151707" ID="ID_604775108" MODIFIED="1362066630191" TEXT="fs/skeleton-icdtcp3/">
@@ -651,7 +688,7 @@
 </html></richcontent>
 <font NAME="SansSerif" SIZE="14"/>
 </node>
-<node COLOR="#990000" CREATED="1361994260075" ID="ID_1567973" MODIFIED="1362066630214" TEXT="__outputs">
+<node COLOR="#990000" CREATED="1361994260075" ID="ID_1567973" MODIFIED="1362139070148" TEXT="__outputs">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -664,11 +701,12 @@
       Bie&#380;&#261;ca kompilacja znajduje si&#281; w output, razem z kompilatorem u&#380;ywanym przy arm_icd_compilation.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <font NAME="SansSerif" SIZE="14"/>
 </node>
 </node>
-<node COLOR="#00b439" CREATED="1361989874927" ID="ID_1242004422" MODIFIED="1362065499697" TEXT="icd">
+<node COLOR="#00b439" CREATED="1361989874927" ID="ID_1242004422" MODIFIED="1362137967919" TEXT="icd">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -683,6 +721,7 @@
   </body>
 </html></richcontent>
 <edge STYLE="bezier" WIDTH="thin"/>
+<arrowlink COLOR="#ffd700" DESTINATION="ID_1572180523" ENDARROW="Default" ENDINCLINATION="119;0;" ID="Arrow_ID_688374039" STARTARROW="None" STARTINCLINATION="119;0;"/>
 <font NAME="SansSerif" SIZE="16"/>
 <node COLOR="#990000" CREATED="1362064179289" ID="ID_934026059" MODIFIED="1362064384659" TEXT="src">
 <richcontent TYPE="NOTE"><html>
@@ -882,17 +921,20 @@
 </html></richcontent>
 <font NAME="SansSerif" SIZE="14"/>
 </node>
-<node COLOR="#990000" CREATED="1361990285615" ID="ID_432970373" MODIFIED="1362066181047" TEXT="bash_env">
+<node COLOR="#990000" CREATED="1361990285615" ID="ID_432970373" MODIFIED="1362138327744" TEXT="bash_env">
 <richcontent TYPE="NOTE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      Do w&#322;asnego .bashrc nalezy doda&#263; lini&#281;
+      Do w&#322;asnego .bashrc nalezy doda&#263; linie:
     </p>
     <p>
-      source /home/insofter/projects/factory/bash_env.sh,
+      &#160;&#160;export CATTUS_USER=tw&#243;j_u&#380;yszkodnik
+    </p>
+    <p>
+      &#160;&#160;source /home/insofter/projects/factory/bash_env.sh,
     </p>
     <p>
       aby by&#322;y dost&#281;pne wszystkie zmienne &#347;rodowiska.
@@ -906,7 +948,18 @@
 </node>
 <node COLOR="#990000" CREATED="1361990280327" ID="ID_1660220833" MODIFIED="1361990283733" TEXT="project_docs/">
 <font NAME="SansSerif" SIZE="14"/>
-<node COLOR="#111111" CREATED="1361994811995" ID="ID_1444870573" MODIFIED="1362065315701" TEXT="THIS document (project_icdtcp3.mm)">
+<node COLOR="#111111" CREATED="1361994811995" ID="ID_1444870573" MODIFIED="1362140172418">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;THIS document<br />(project_icdtcp3.mm)
+    </p>
+  </body>
+</html>
+</richcontent>
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -929,6 +982,7 @@
     </p>
   </body>
 </html></richcontent>
+<icon BUILTIN="idea"/>
 </node>
 </node>
 <node COLOR="#990000" CREATED="1361991442796" ID="ID_573186179" MODIFIED="1362066249374" TEXT="how_to_begin.sh">
