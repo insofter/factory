@@ -519,7 +519,7 @@
 <font NAME="SansSerif" SIZE="16"/>
 <icon BUILTIN="full-1"/>
 </node>
-<node COLOR="#00b439" CREATED="1361991578658" ID="ID_249111711" MODIFIED="1362161586855" TEXT="kompilacja">
+<node COLOR="#00b439" CREATED="1361991578658" ID="ID_249111711" MODIFIED="1362222879604" TEXT="kompilacja">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -542,6 +542,9 @@
     </p>
     <p>
       i uruchomi&#263; kompilacj&#281; po raz kolejny.
+    </p>
+    <p>
+      W {factory}/INFO znajduj&#261; si&#281; informacje o znanych b&#322;&#281;dach i problemach oraz ich rozwi&#261;zania.
     </p>
   </body>
 </html>

@@ -29,6 +29,14 @@ non standard packages, needed by compilation:
   *  unzip
   *  rsync
   *  svn
+  *  texinfo-4.13a-8 or similar, because texinfo-5.0-1 is incompatible with
+     current buildroot. Error message, which you can fix with downgrade:
+     >>  conftest.c:14625: must be after `@defmac' to use `@defmacx'
+     >>  make[3]: *** [autoconf.info] Error 1
+
+known problems:
+  *  texinfo -- conftest.c:14625 (above)
+  *  glibc -- gets is security hole (workaround in night.sh)
 
 for 64 bit:
   *  lib32-libxft for sam-ba
