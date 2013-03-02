@@ -7,7 +7,7 @@ then
 fi
 
 
-
+USTART=`date +%s`
 DATE=`date +%Y.%m.%d__%H-%M-%S`
 
 #tytuł terminala
@@ -106,8 +106,17 @@ echo "make_relpkg end: `date +%Y.%m.%d__%H-%M-%S`" 2>&1 | tee -a ../night_${DATE
 
 
 echo -e "END\nstart: ${DATE}\nend: `date +%Y.%m.%d__%H-%M-%S`" 2>&1 | tee -a ../night_${DATE}.all.log
+USTOP=`date +%s`
+let "UDIF=$USTOP-$USTART"
+let "HH=$UDIF/3600"
+let "UDIF=$UDIF-($HH*3600)"
+let "MM=$UDIF/60"
+let "UDIF=$UDIF-($MM*60)"
+let "SS=$UDIF"
+echo "Time: ${HH}h ${MM}m ${SS}s" | tee -a ../night_${DATE}.all.log
 
-echo -e ${DATE}
+
+
 
 echo -e "ls -lah output/images/\n`ls -lah output/images/`" | tee -a ../night_${DATE}.all.log
 
