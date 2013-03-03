@@ -519,7 +519,7 @@
 <font NAME="SansSerif" SIZE="16"/>
 <icon BUILTIN="full-1"/>
 </node>
-<node COLOR="#00b439" CREATED="1361991578658" ID="ID_249111711" MODIFIED="1362222879604" TEXT="kompilacja">
+<node COLOR="#00b439" CREATED="1361991578658" ID="ID_249111711" MODIFIED="1362321266754" TEXT="kompilacja">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -527,6 +527,9 @@
   <body>
     <p>
       Kompilacj&#281; lokaln&#261; mo&#380;na wykona&#263; skryptem {factory}/night.sh.
+    </p>
+    <p>
+      Podczas kompilacji skrypt si&#281; &#322;&#261;czy do serwera, wi&#281;c warto umo&#380;liwi&#263; po&#322;&#261;czenia ssh bez podawania has&#322;a.
     </p>
     <p>
       Je&#347;li u&#380;ytkownik ma uprawnienia do wykonywania polecenia
