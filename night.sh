@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ 0`df /home/insofter/projects/buildroot/ | tail -n 1 | awk '{print $4}'` -lt 4000000 ]
+if [ 0`df ${ICDTCP3_DIR}/buildroot/ | tail -n 1 | awk '{print $4}'` -lt 4000000 ]
 then
   echo "Error: not enough disk space"
   exit 3
@@ -13,7 +13,7 @@ DATE=`date +%Y.%m.%d__%H-%M-%S`
 #tytuł terminala
 echo -ne "\033]0;"Night ${DATE}"\007"
 
-cd /home/insofter/projects/buildroot
+cd ${ICDTCP3_DIR}/buildroot
 git checkout icdtcp3-2011.11
 
 

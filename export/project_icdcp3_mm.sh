@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /home/insofter/projects/factory
+cd ${ICDTCP3_DIR}/factory
 
 scp project_docs/project_files/project_icdtcp3.mm \
   ${CATTUS_USER}@cattus.info:/srv/files/project_docs/project_files/project_icdtcp3.mm

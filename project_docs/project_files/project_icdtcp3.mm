@@ -581,7 +581,7 @@
   </head>
   <body>
     <p>
-      Projekt zosta&#322; umieszczony w katalogu /home/insofter/projects.
+      Projekt zosta&#322; umieszczony w katalogu ${ICDTCP3_DIR}.
     </p>
     <p>
       Poza repozytoriami dost&#281;pne s&#261; katalogi kompilacji:
@@ -949,7 +949,7 @@
       &#160;&#160;export CATTUS_USER=tw&#243;j_u&#380;yszkodnik
     </p>
     <p>
-      &#160;&#160;source /home/insofter/projects/factory/bash_env.sh,
+      &#160;&#160;source ${ICDTCP3_DIR}/factory/bash_env.sh,
     </p>
     <p>
       aby by&#322;y dost&#281;pne wszystkie zmienne &#347;rodowiska.
@@ -1037,7 +1037,7 @@
   </head>
   <body>
     <p>
-      Wykonanie podstawowych polece&#324; gita dla wszystkich repozytori&#243;w w /home/insofter/projects/,
+      Wykonanie podstawowych polece&#324; gita dla wszystkich repozytori&#243;w w ${ICDTCP3_DIR}/,
     </p>
     <p>
       Dostepne jako alias 'gall'.

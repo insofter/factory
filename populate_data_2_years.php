@@ -4,7 +4,7 @@ echo 'start ';
 flush();
 
 try {
-  $baza = new PDO("sqlite:/home/insofter/projects/data/data.db");
+  $baza = new PDO("sqlite:${ICDTCP3_DIR}/data/data.db");
 } catch (PDOException $e) {
   print $e->getMessage();
 }

@@ -1,13 +1,13 @@
 repositories:
 
-  *  /home/insofter/projects/factory
-  *  /home/insofter/projects/scripts
-  *  /home/insofter/projects/icd
-  *  /home/insofter/projects/buildroot
+  *  ${ICDTCP3_DIR}/factory
+  *  ${ICDTCP3_DIR}/scripts
+  *  ${ICDTCP3_DIR}/icd
+  *  ${ICDTCP3_DIR}/buildroot
 
 .bashrc:
   *  export CATTUS_USER=your_user
-  *  source /home/insofter/projects/factory/bash_env.sh
+  *  source ${ICDTCP3_DIR}/factory/bash_env.sh
 
 tftp:
   *  /srv/tftp

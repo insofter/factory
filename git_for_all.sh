@@ -3,7 +3,7 @@
 endconde=0
 col=32
 
-cd /home/insofter/projects
+cd ${ICDTCP3_DIR}
 for x in * 
 do
   if echo ${x} | grep -q -v NC

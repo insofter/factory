@@ -1,17 +1,18 @@
 For working with WWW do as following, on your local machine:
 
-1. Make symlink for /home/insofter/projects/icd/www
+1. Make symlink for ${ICDTCP3_DIR}/icd/www
     ie:
-      ln -s /home/insofter/projects/icd/www ~/public_html/icd
+      ln -s ${ICDTCP3_DIR}/icd/www ~/public_html/icd
 
 
 2. Add /etc/profile.d/icd.sh file with permissions to read:
-    export ICD_DATA_DB=/home/insofter/projects/data/data.db
-    export ICD_CONFIG_DB=/home/insofter/projects/data/config.db
-    export ICD_LIVE_DB=/home/insofter/projects/data/live.db
+    ICDTCP3_DIR=/path/to/directory
+    export ICD_DATA_DB=${ICDTCP3_DIR}/data/data.db
+    export ICD_CONFIG_DB=${ICDTCP3_DIR}/data/config.db
+    export ICD_LIVE_DB=${ICDTCP3_DIR}/data/live.db
     export ICD_TEMP_DIR=/tmp
     export ICD_SHARE_DIR=/usr/share/icd
-    export ICD_DATA_DIR=/home/insofter/projects/data
+    export ICD_DATA_DIR=${ICDTCP3_DIR}/data
 
 3. Add '/etc/profile.d/' 'to open_basedir=' in /etc/php/php.ini
     ie: 
