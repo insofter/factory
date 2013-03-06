@@ -7,8 +7,8 @@ fi
 if [ "${ICDTCP3_DIR}" = "" ]
 then
   echo "Brak zmiennej \`ICDTCP3_DIR' !"
-  export ICDTCP3_DIR=/home/insofter/projects
-  echo 'export ICDTCP3_DIR=/home/insofter/projects'
+  export ICDTCP3_DIR=/home/project_icdtcp3
+  echo 'export ICDTCP3_DIR=/home/project_icdtcp3'
 fi
 
 #icd
@@ -68,3 +68,4 @@ sa() {
     ssh admin@192.168.2.199
   fi
 }
+

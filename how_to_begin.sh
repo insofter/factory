@@ -36,9 +36,13 @@ echo "gpasswd -a ${local_user} uucp"
 gpasswd -a ${local_user} uucp
 
 
-echo "Type path to your work directory. Have to be full path."
+echo "Type path to your work directory. Have to be full path. Leave empty to use \`/home/project_icdtcp3'"
 echo -n "It will be created with your user's ownership: "
 read icdtcp3_dir
+if [ "${icdtcp3_dir}" = "" ] 
+then
+  icdtcp3_dir=/home/project_icdtcp3
+fi
 
 echo "mkdir -p ${icdtcp3_dir}" 
 if ! mkdir -p ${icdtcp3_dir} 
