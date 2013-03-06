@@ -61,6 +61,7 @@ echo
 
 echo "Add 'export ICDTCP3_DIR="${icdtcp3_dir}"' to your normal user .bashrc file."
 echo "Add 'export CATTUS_USER="${cattus_user}"' to your normal user .bashrc file."
+echo "Remember to reload your shell!"
 
 cat << HOW_TO_BEGIN_STAGE_II > ${icdtcp3_dir}/how_to_begin_stage_II.sh
 #!/bin/bash
