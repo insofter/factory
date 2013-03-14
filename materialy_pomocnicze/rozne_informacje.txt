@@ -8,7 +8,9 @@ zmiana konfiguracji buildroota:
 zmiana konfiguracji kernela (linux):
     make ARCH=arm CROSS_COMPILE=arm-linux- icdtcp3_defconfig
     make ARCH=arm CROSS_COMPILE=arm-linux- menuconfig
-    make ARCH=arm CROSS_COMPILE=arm-linux- uImage
+    cp .config arch/arm/configs/icdtcp3_defconfig
+    git add arch/arm/configs/icdtcp3_defconfig
+    git commit
 
 
 zmiany w icd:

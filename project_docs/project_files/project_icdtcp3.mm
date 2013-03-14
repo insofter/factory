@@ -550,8 +550,7 @@
       W {factory}/INFO znajduj&#261; si&#281; informacje o znanych b&#322;&#281;dach i problemach oraz ich rozwi&#261;zania.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
 <icon BUILTIN="full-2"/>
@@ -653,7 +652,7 @@
 </html></richcontent>
 <font NAME="SansSerif" SIZE="14"/>
 </node>
-<node COLOR="#990000" CREATED="1361994198019" ID="ID_853953599" MODIFIED="1362066630153" TEXT="make newicd">
+<node COLOR="#990000" CREATED="1361994198019" ID="ID_853953599" MODIFIED="1363286214675" TEXT="make newicd">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -666,10 +665,28 @@
       Nalezy uruchomi&#263; po wykonaniu poprawek w icd.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <font NAME="SansSerif" SIZE="14"/>
 </node>
-<node COLOR="#990000" CREATED="1361995244954" ID="ID_714174932" MODIFIED="1362139073007" TEXT="make">
+<node COLOR="#990000" CREATED="1361994198019" ID="ID_1338275509" MODIFIED="1363286235500" TEXT="make newlinux">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Ustawia najnowszy commit z lokalnego repozytorium linux na u&#380;ywany przy kompilacji.
+    </p>
+    <p>
+      Nalezy uruchomi&#263; po wykonaniu poprawek w kernelu.
+    </p>
+  </body>
+</html>
+</richcontent>
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+<node COLOR="#990000" CREATED="1361995244954" ID="ID_714174932" MODIFIED="1363286214181" TEXT="make">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -685,10 +702,11 @@
       funkcji gets(). Nalezy kompilowa&#263; przez {factory}/night.sh lub na serwerze.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <font NAME="SansSerif" SIZE="14"/>
 </node>
-<node COLOR="#990000" CREATED="1361994151707" ID="ID_604775108" MODIFIED="1362066630191" TEXT="fs/skeleton-icdtcp3/">
+<node COLOR="#990000" CREATED="1361994151707" ID="ID_604775108" MODIFIED="1363286213832" TEXT="fs/skeleton-icdtcp3/">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -701,10 +719,11 @@
       do obrazu systemu.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <font NAME="SansSerif" SIZE="14"/>
 </node>
-<node COLOR="#990000" CREATED="1361994260075" ID="ID_1567973" MODIFIED="1362139070148" TEXT="__outputs">
+<node COLOR="#990000" CREATED="1361994260075" ID="ID_1567973" MODIFIED="1363286213093" TEXT="__outputs">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -717,7 +736,8 @@
       Bie&#380;&#261;ca kompilacja znajduje si&#281; w output, razem z kompilatorem u&#380;ywanym przy arm_icd_compilation.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <font NAME="SansSerif" SIZE="14"/>
 </node>
 </node>
@@ -822,7 +842,7 @@
 <font NAME="SansSerif" SIZE="14"/>
 </node>
 </node>
-<node COLOR="#00b439" CREATED="1361989917303" ID="ID_1011028581" MODIFIED="1362065099866" TEXT="linux">
+<node COLOR="#00b439" CREATED="1361989917303" ID="ID_1011028581" MODIFIED="1363286052268" TEXT="linux">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -832,7 +852,53 @@
       J&#261;dro systemu.
     </p>
     <p>
-      Konfiguracja: arch / arm / configs / icdtcp3_defconfig
+      Nale&#380;y poda&#263; architektur&#281; w poleceniu, jak parametr dla make:
+    </p>
+    <p>
+      make ARCH=arm CROSS_COMPILE=arm-linux- <i>polecenie</i>
+    </p>
+  </body>
+</html>
+</richcontent>
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<node COLOR="#990000" CREATED="1363285626080" ID="ID_1687498360" MODIFIED="1363286078693" TEXT="make menuconfig">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Zmiana konfiguracji j&#261;dra:
+    </p>
+    <p>
+      make ARCH=arm CROSS_COMPILE=arm-linux- icdtcp3_defconfig
+    </p>
+    <p>
+      make ARCH=arm CROSS_COMPILE=arm-linux- menuconfig
+    </p>
+    <p>
+      cp .config arch/arm/configs/icdtcp3_defconfig
+    </p>
+    <p>
+      git add arch/arm/configs/icdtcp3_defconfig
+    </p>
+    <p>
+      git commit
+    </p>
+  </body>
+</html>
+</richcontent>
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+<node COLOR="#990000" CREATED="1363285955147" ID="ID_80825288" MODIFIED="1363286295349" TEXT="pliki">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Konfiguracja: arch / arm / configs / icdtcp3_defconfig (menuconfig)
     </p>
     <p>
       Inicjalizacja urzadze&#324; na p&#322;ytce: arch / arm / mach-at91 / board-icdtcp3.c
@@ -841,9 +907,10 @@
       Drivery: drivers / icdtcp3 / *
     </p>
   </body>
-</html></richcontent>
-<edge STYLE="bezier" WIDTH="thin"/>
-<font NAME="SansSerif" SIZE="16"/>
+</html>
+</richcontent>
+<font NAME="SansSerif" SIZE="14"/>
+</node>
 </node>
 <node COLOR="#00b439" CREATED="1361989953999" ID="ID_11691733" MODIFIED="1362065169066" TEXT="at91bootstrap">
 <richcontent TYPE="NOTE"><html>
@@ -963,17 +1030,18 @@
 </node>
 <node COLOR="#990000" CREATED="1361990280327" ID="ID_1660220833" MODIFIED="1361990283733" TEXT="project_docs/">
 <font NAME="SansSerif" SIZE="14"/>
-<node COLOR="#111111" CREATED="1361994811995" ID="ID_1444870573" MODIFIED="1362140172418">
+<node COLOR="#111111" CREATED="1361994811995" ID="ID_1444870573" MODIFIED="1363286311490">
 <richcontent TYPE="NODE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      &#160;&#160;&#160;&#160;&#160;THIS document<br />(project_icdtcp3.mm)
+      &#160;&#160;THIS document<br />(project_icdtcp3.mm)
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <richcontent TYPE="NOTE"><html>
   <head>
     
