@@ -1,9 +1,14 @@
-zmiana konfiguracji:
+zmiana konfiguracji buildroota:
     make icdtcp3_defconfig
 
     make menuconfig
     make savedefconfig 
     cp defconfig buildroot/configs/icdtcp3_defconfig
+
+zmiana konfiguracji kernela (linux):
+    make ARCH=arm CROSS_COMPILE=arm-linux- icdtcp3_defconfig
+    make ARCH=arm CROSS_COMPILE=arm-linux- menuconfig
+    make ARCH=arm CROSS_COMPILE=arm-linux- uImage
 
 
 zmiany w icd:
