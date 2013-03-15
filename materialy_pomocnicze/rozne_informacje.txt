@@ -1,9 +1,16 @@
-zmiana konfiguracji:
+zmiana konfiguracji buildroota:
     make icdtcp3_defconfig
 
     make menuconfig
     make savedefconfig 
     cp defconfig buildroot/configs/icdtcp3_defconfig
+
+zmiana konfiguracji kernela (linux):
+    make ARCH=arm CROSS_COMPILE=arm-linux- icdtcp3_defconfig
+    make ARCH=arm CROSS_COMPILE=arm-linux- menuconfig
+    cp .config arch/arm/configs/icdtcp3_defconfig
+    git add arch/arm/configs/icdtcp3_defconfig
+    git commit
 
 
 zmiany w icd:
