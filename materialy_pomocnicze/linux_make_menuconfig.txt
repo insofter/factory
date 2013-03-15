@@ -1,0 +1,8 @@
+#comands to menuconfig in linux
+
+    make ARCH=arm CROSS_COMPILE=arm-linux- icdtcp3_defconfig
+    make ARCH=arm CROSS_COMPILE=arm-linux- menuconfig
+    cp .config arch/arm/configs/icdtcp3_defconfig
+    git add arch/arm/configs/icdtcp3_defconfig
+    git commit
+

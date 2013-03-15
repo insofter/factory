@@ -1,0 +1,8 @@
+#comands to menuconfig in buildroot
+
+    make icdtcp3_defconfig
+    make menuconfig
+    make savedefconfig
+    cp defconfig configs/icdtcp3_defconfig
+    git add configs/icdtcp3_defconfig
+    git commit

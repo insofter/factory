@@ -1,31 +1,3 @@
-zmiana konfiguracji buildroota:
-    make icdtcp3_defconfig
-
-    make menuconfig
-    make savedefconfig 
-    cp defconfig buildroot/configs/icdtcp3_defconfig
-
-zmiana konfiguracji kernela (linux):
-    make ARCH=arm CROSS_COMPILE=arm-linux- icdtcp3_defconfig
-    make ARCH=arm CROSS_COMPILE=arm-linux- menuconfig
-    cp .config arch/arm/configs/icdtcp3_defconfig
-    git add arch/arm/configs/icdtcp3_defconfig
-    git commit
-
-
-zmiany w icd:
-    commit [zm. w buildroocie, make menuconfig]
-    git describe
-    
-    make-package (make package)
-    make-target (./make-target.sh)
-
-
-po kompilacji calosci:
-    make relpkg
-    make updpkg
-
-
 prawa dostępu:
     buildroot/target/generic/
       device_table-icdtcp3.txt
