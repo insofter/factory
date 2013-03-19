@@ -38,6 +38,9 @@ do
         log)
           git log --graph --oneline -3
           ;;
+        branch)
+          git branch | grep "*"
+          ;;
 
 
         *)

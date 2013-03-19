@@ -1,0 +1,18 @@
+#current working branches 
+#git checkout {branch} after git clone (or how_to_begin_stage_II.sh)
+
+
+buildroot
+* icdtcp3-2011.11
+
+factory
+* master
+
+icd
+* master
+
+linux
+* 3.1.4-icdtcp3
+
+scripts
+* master
