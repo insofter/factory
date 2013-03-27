@@ -1,10 +1,10 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node COLOR="#000000" CREATED="1361951309121" ID="ID_214036463" MODIFIED="1362063797682" STYLE="bubble" TEXT="ICDTCP3">
+<node COLOR="#000000" CREATED="1361951309121" ID="ID_214036463" MODIFIED="1364407770067" STYLE="bubble" TEXT="ICDTCP3">
 <edge COLOR="#808080"/>
 <font NAME="SansSerif" SIZE="20"/>
 <hook NAME="accessories/plugins/AutomaticLayout.properties"/>
-<node COLOR="#0033ff" CREATED="1361951354411" ID="ID_546530039" MODIFIED="1362066629374" POSITION="right" STYLE="bubble" TEXT="linux">
+<node COLOR="#0033ff" CREATED="1361951354411" ID="ID_546530039" MODIFIED="1364407764399" POSITION="right" STYLE="bubble" TEXT="linux">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -20,7 +20,7 @@
 </html></richcontent>
 <edge COLOR="#808080" STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
-<node COLOR="#00b439" CREATED="1362063801754" ID="ID_1506723969" MODIFIED="1362066645534" TEXT="/etc/profile.d/icd.sh">
+<node COLOR="#00b439" CREATED="1362063801754" ID="ID_1506723969" MODIFIED="1364407764419" TEXT="/etc/profile.d/icd.sh">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -39,7 +39,7 @@
 <edge COLOR="#808080" STYLE="bezier" WIDTH="thin"/>
 <arrowlink COLOR="#ffd700" DESTINATION="ID_604775108" ENDARROW="Default" ENDINCLINATION="807;0;" ID="Arrow_ID_1027486490" STARTARROW="None" STARTINCLINATION="807;0;"/>
 <font NAME="SansSerif" SIZE="16"/>
-<node COLOR="#990000" CREATED="1361951391991" ID="ID_15166884" MODIFIED="1362066629415" STYLE="bubble" TEXT="S40icd">
+<node COLOR="#990000" CREATED="1361951391991" ID="ID_15166884" MODIFIED="1364407764450" STYLE="bubble" TEXT="S40icd">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -65,7 +65,7 @@
 <edge COLOR="#808080" STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="14"/>
 <node COLOR="#111111" CREATED="1361976573970" ID="ID_980444875" MODIFIED="1361977275550" STYLE="bubble" TEXT="icd-create-*">
-<node COLOR="#111111" CREATED="1361976629641" ID="ID_1560112367" MODIFIED="1362066629451" STYLE="bubble" TEXT="icd-create-data">
+<node COLOR="#111111" CREATED="1361976629641" ID="ID_1560112367" MODIFIED="1364407764481" STYLE="bubble" TEXT="icd-create-data">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -89,7 +89,7 @@
   </body>
 </html></richcontent>
 </node>
-<node COLOR="#111111" CREATED="1361976611817" ID="ID_1481805635" MODIFIED="1362066629482" STYLE="bubble" TEXT="icd-create-live-db">
+<node COLOR="#111111" CREATED="1361976611817" ID="ID_1481805635" MODIFIED="1364407764499" STYLE="bubble" TEXT="icd-create-live-db">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -102,7 +102,7 @@
 </html></richcontent>
 </node>
 </node>
-<node COLOR="#111111" CREATED="1361955440458" ID="ID_1409599933" MODIFIED="1362066629503" STYLE="bubble" TEXT="icd-cron">
+<node COLOR="#111111" CREATED="1361955440458" ID="ID_1409599933" MODIFIED="1364407764520" STYLE="bubble" TEXT="icd-cron">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -116,7 +116,7 @@
 <edge COLOR="#808080"/>
 <arrowlink COLOR="#ffd700" DESTINATION="ID_251290198" ENDARROW="Default" ENDINCLINATION="74;0;" ID="Arrow_ID_802068222" STARTARROW="None" STARTINCLINATION="74;0;"/>
 <font NAME="SansSerif" SIZE="12"/>
-<node COLOR="#111111" CREATED="1361955447997" ID="ID_1797662751" MODIFIED="1362066629524" STYLE="bubble" TEXT="icd-transfer-data">
+<node COLOR="#111111" CREATED="1361955447997" ID="ID_1797662751" MODIFIED="1364407764541" STYLE="bubble" TEXT="icd-transfer-data">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -131,7 +131,7 @@
 <arrowlink COLOR="#ffd700" DESTINATION="ID_1086714611" ENDARROW="Default" ENDINCLINATION="178;0;" ID="Arrow_ID_1850612715" STARTARROW="None" STARTINCLINATION="178;0;"/>
 <font NAME="SansSerif" SIZE="12"/>
 </node>
-<node COLOR="#111111" CREATED="1361973033934" ID="ID_923100820" MODIFIED="1362066629543" STYLE="bubble" TEXT="icd-flush-db">
+<node COLOR="#111111" CREATED="1361973033934" ID="ID_923100820" MODIFIED="1364407764561" STYLE="bubble" TEXT="icd-flush-db">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -148,45 +148,72 @@
 <font NAME="SansSerif" SIZE="12"/>
 </node>
 </node>
-<node COLOR="#111111" CREATED="1361951573202" ID="ID_1893388337" MODIFIED="1362065540928" STYLE="bubble" TEXT="icd-network">
+<node COLOR="#111111" CREATED="1361951573202" ID="ID_1893388337" MODIFIED="1364408313278" STYLE="bubble" TEXT="icd-net">
 <richcontent TYPE="NOTE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      Zarz&#261;dza po&#322;&#261;czeniem z internetem po kablu.
+      Zarz&#261;dza po&#322;&#261;czeniami z internetem.
+    </p>
+    <p>
+      Pracuje w niesko&#324;czonej p&#281;tli, pr&#243;buj&#261;c utrzyma&#263; zadany stan,
+    </p>
+    <p>
+      np: resetuje zawieszonego wpa_supplicanta lub przekonfigurowuje po&#322;&#261;czenia
+    </p>
+    <p>
+      po zmianie parametr&#243;w w bazie danych.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <edge COLOR="#808080"/>
 <arrowlink COLOR="#ffd700" DESTINATION="ID_251290198" ENDARROW="Default" ENDINCLINATION="187;0;" ID="Arrow_ID_1085428275" STARTARROW="None" STARTINCLINATION="187;0;"/>
 <font NAME="SansSerif" SIZE="12"/>
-<node COLOR="#111111" CREATED="1361958686697" ID="ID_1555724774" MODIFIED="1361977275553" STYLE="bubble" TEXT="ifconfig eth0 *">
-<edge COLOR="#808080"/>
-<font NAME="SansSerif" SIZE="12"/>
-</node>
-<node COLOR="#111111" CREATED="1361957606698" ID="ID_1240322630" MODIFIED="1361977275554" STYLE="bubble" TEXT="udhcpc -i eth0">
-<edge COLOR="#808080"/>
-<font NAME="SansSerif" SIZE="12"/>
-</node>
-</node>
-<node COLOR="#111111" CREATED="1361955383844" ID="ID_1389021610" MODIFIED="1362065561008" STYLE="bubble" TEXT="icd-wifi-daemon">
+<node COLOR="#111111" CREATED="1364405831531" ID="ID_1355932643" MODIFIED="1364407862111" TEXT="Ethernet - eth0">
 <richcontent TYPE="NOTE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      Zarz&#261;dza po&#322;&#261;czeniem WiFi.
+      Funkcje eth_*() obs&#322;uguj&#261;ce po&#322;&#261;czenie kablowe.
     </p>
   </body>
 </html></richcontent>
+<arrowlink COLOR="#ffd700" DESTINATION="ID_204389358" ENDARROW="Default" ENDINCLINATION="615;0;" ID="Arrow_ID_984878961" STARTARROW="None" STARTINCLINATION="615;0;"/>
+<node COLOR="#111111" CREATED="1361957606698" ID="ID_1240322630" MODIFIED="1364407674577" STYLE="bubble" TEXT="udhcpc -i eth0">
 <edge COLOR="#808080"/>
-<arrowlink COLOR="#ffd700" DESTINATION="ID_251290198" ENDARROW="Default" ENDINCLINATION="175;0;" ID="Arrow_ID_801071950" STARTARROW="None" STARTINCLINATION="175;0;"/>
-<arrowlink COLOR="#ffd700" DESTINATION="ID_1297566231" ENDARROW="Default" ENDINCLINATION="307;0;" ID="Arrow_ID_1468509853" STARTARROW="None" STARTINCLINATION="307;0;"/>
 <font NAME="SansSerif" SIZE="12"/>
-<node COLOR="#111111" CREATED="1361957689414" ID="ID_1832859850" MODIFIED="1362067582652" STYLE="bubble" TEXT="icd-wifi-cfg-[from|to]">
+</node>
+<node COLOR="#111111" CREATED="1364407297223" ID="ID_1983618228" MODIFIED="1364407684396" TEXT="dnsmasq">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Funkcje dnsmasq_*() obs&#322;uguj&#261; serwer DNS i DHCP, s&#322;u&#380;&#261;cy do udost&#281;pnienia po&#322;&#261;cze&#324; bezprzewodowych po kablu.
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node COLOR="#111111" CREATED="1364405974853" ID="ID_1903741515" MODIFIED="1364407871447" TEXT="WiFi - wlan0">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Funkcje wifi_*() obs&#322;uguj&#261;ce po&#322;&#261;czenie wifi.
+    </p>
+  </body>
+</html></richcontent>
+<arrowlink COLOR="#ffd700" DESTINATION="ID_1297566231" ENDARROW="Default" ENDINCLINATION="442;0;" ID="Arrow_ID_724515757" STARTARROW="None" STARTINCLINATION="442;0;"/>
+<node COLOR="#111111" CREATED="1361957689414" ID="ID_1832859850" MODIFIED="1364407764621" STYLE="bubble" TEXT="icd-wifi-cfg-[from|to]">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -204,29 +231,59 @@
 <edge COLOR="#808080"/>
 <font NAME="SansSerif" SIZE="12"/>
 </node>
-<node COLOR="#111111" CREATED="1361957667695" ID="ID_559770647" MODIFIED="1361977275555" STYLE="bubble" TEXT="udhcpc -i wlan0">
+<node COLOR="#111111" CREATED="1361957667695" ID="ID_559770647" MODIFIED="1364407665439" STYLE="bubble" TEXT="udhcpc -i wlan0">
 <edge COLOR="#808080"/>
 <font NAME="SansSerif" SIZE="12"/>
 </node>
 </node>
-<node COLOR="#111111" CREATED="1361955396929" ID="ID_681596751" MODIFIED="1362067363028" STYLE="bubble" TEXT="icd-gsm-daemon">
+<node COLOR="#111111" CREATED="1364405997885" ID="ID_554811297" MODIFIED="1364407877828" TEXT="GSM - ppp0">
 <richcontent TYPE="NOTE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      Zarz&#261;dza po&#322;&#261;czeniem przez modem GSM.
+      Funkcje gsm_*() obs&#322;uguj&#261;ce po&#322;&#261;czenie GSM.
+    </p>
+    <p>
+      Nie zaimplementowane.
     </p>
   </body>
 </html></richcontent>
-<edge COLOR="#808080"/>
-<arrowlink COLOR="#ffd700" DESTINATION="ID_251290198" ENDARROW="Default" ENDINCLINATION="158;0;" ID="Arrow_ID_367954232" STARTARROW="None" STARTINCLINATION="158;0;"/>
-<arrowlink COLOR="#ffd700" DESTINATION="ID_933283166" ENDARROW="Default" ENDINCLINATION="280;0;" ID="Arrow_ID_1692517208" STARTARROW="None" STARTINCLINATION="280;0;"/>
-<font NAME="SansSerif" SIZE="12"/>
+<arrowlink COLOR="#ffd700" DESTINATION="ID_933283166" ENDARROW="Default" ENDINCLINATION="419;0;" ID="Arrow_ID_1850145407" STARTARROW="None" STARTINCLINATION="419;0;"/>
 <icon BUILTIN="button_cancel"/>
 </node>
-<node COLOR="#111111" CREATED="1361955426571" ID="ID_1531893197" MODIFIED="1362065666554" STYLE="bubble" TEXT="icd-itd-demon">
+<node COLOR="#111111" CREATED="1364406071691" ID="ID_295039692" MODIFIED="1364406115584" TEXT="icd-net-route-resolv">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Dynamiczne zarz&#261;dzanie bram&#261; i DNSami w zale&#380;no&#347;ci od stan&#243;w po&#322;&#261;cze&#324;
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node COLOR="#111111" CREATED="1364407129263" ID="ID_1180110459" MODIFIED="1364407674577" TEXT="udhcpc.script">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Zapisuje informacje o DNSach i routingu uzyskane przez udhcpc.
+    </p>
+    <p>
+      Skrypt znajduje si&#281; w $ICD_SHARE_DIR
+    </p>
+  </body>
+</html></richcontent>
+<arrowlink COLOR="#ffd700" DESTINATION="ID_1240322630" ENDARROW="Default" ENDINCLINATION="210;0;" ID="Arrow_ID_16927710" STARTARROW="None" STARTINCLINATION="210;0;"/>
+<arrowlink COLOR="#ffd700" DESTINATION="ID_559770647" ENDARROW="Default" ENDINCLINATION="139;0;" ID="Arrow_ID_1819172573" STARTARROW="None" STARTINCLINATION="139;0;"/>
+</node>
+</node>
+<node COLOR="#111111" CREATED="1361955426571" ID="ID_1531893197" MODIFIED="1364405825008" STYLE="bubble" TEXT="icd-itd-demon">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -241,7 +298,7 @@
 <arrowlink COLOR="#ffd700" DESTINATION="ID_1734979662" ENDARROW="Default" ENDINCLINATION="188;0;" ID="Arrow_ID_1825416628" STARTARROW="None" STARTINCLINATION="188;0;"/>
 <font NAME="SansSerif" SIZE="12"/>
 </node>
-<node COLOR="#111111" CREATED="1361955407056" ID="ID_1660704319" MODIFIED="1362065708066" STYLE="bubble" TEXT="icd-fc-daemon">
+<node COLOR="#111111" CREATED="1361955407056" ID="ID_1660704319" MODIFIED="1364407764696" STYLE="bubble" TEXT="icd-fc-daemon">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -259,7 +316,7 @@
 <font NAME="SansSerif" SIZE="12"/>
 </node>
 </node>
-<node COLOR="#990000" CREATED="1361955492824" ID="ID_1149453662" MODIFIED="1362066629610" STYLE="bubble" TEXT="S80lighttpd">
+<node COLOR="#990000" CREATED="1361955492824" ID="ID_1149453662" MODIFIED="1364407764719" STYLE="bubble" TEXT="S80lighttpd">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -278,7 +335,7 @@
 <node COLOR="#111111" CREATED="1361955559131" ID="ID_72264620" MODIFIED="1362065025752" STYLE="bubble" TEXT="PHP (/var/www/)">
 <edge COLOR="#808080"/>
 <font NAME="SansSerif" SIZE="12"/>
-<node COLOR="#111111" CREATED="1361958791266" ID="ID_1592856150" MODIFIED="1362140332753" STYLE="bubble" TEXT="index.php">
+<node COLOR="#111111" CREATED="1361958791266" ID="ID_1592856150" MODIFIED="1364407764788" STYLE="bubble" TEXT="index.php">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -318,7 +375,7 @@
 <node COLOR="#990000" CREATED="1361956156373" ID="ID_1172743165" MODIFIED="1361977275568" STYLE="bubble" TEXT="SQLite3">
 <edge COLOR="#808080"/>
 <font NAME="SansSerif" SIZE="14"/>
-<node COLOR="#111111" CREATED="1361955728433" ID="ID_251290198" MODIFIED="1362066629665" STYLE="bubble" TEXT="config.db">
+<node COLOR="#111111" CREATED="1361955728433" ID="ID_251290198" MODIFIED="1364407764829" STYLE="bubble" TEXT="config.db">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -332,7 +389,7 @@
 <edge COLOR="#808080"/>
 <font NAME="SansSerif" SIZE="12"/>
 </node>
-<node COLOR="#111111" CREATED="1361955717709" ID="ID_1086714611" MODIFIED="1362066629683" STYLE="bubble" TEXT="data.db">
+<node COLOR="#111111" CREATED="1361955717709" ID="ID_1086714611" MODIFIED="1364407764846" STYLE="bubble" TEXT="data.db">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -354,7 +411,7 @@
 <node COLOR="#990000" CREATED="1361973067837" ID="ID_829267022" MODIFIED="1361977275563" STYLE="bubble" TEXT="SQLite3">
 <edge COLOR="#808080"/>
 <font NAME="SansSerif" SIZE="14"/>
-<node COLOR="#111111" CREATED="1361973073369" ID="ID_426197472" MODIFIED="1362066629723" STYLE="bubble" TEXT="live.db">
+<node COLOR="#111111" CREATED="1361973073369" ID="ID_426197472" MODIFIED="1364407764879" STYLE="bubble" TEXT="live.db">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -374,7 +431,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#0033ff" CREATED="1361956211817" ID="ID_241742111" MODIFIED="1362066629744" POSITION="right" STYLE="bubble" TEXT="elektronika">
+<node COLOR="#0033ff" CREATED="1361956211817" ID="ID_241742111" MODIFIED="1364407764895" POSITION="right" STYLE="bubble" TEXT="elektronika">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -388,7 +445,7 @@
 <edge COLOR="#808080" STYLE="sharp_bezier" WIDTH="8"/>
 <arrowlink COLOR="#ffd700" DESTINATION="ID_546530039" ENDARROW="Default" ENDINCLINATION="138;0;" ID="Arrow_ID_1372809567" STARTARROW="None" STARTINCLINATION="138;0;"/>
 <font NAME="SansSerif" SIZE="18"/>
-<node COLOR="#00b439" CREATED="1361956431087" ID="ID_1332600065" MODIFIED="1362065834068" STYLE="bubble" TEXT="LCD 2x16">
+<node COLOR="#00b439" CREATED="1361956431087" ID="ID_1332600065" MODIFIED="1364407764915" STYLE="bubble" TEXT="LCD 2x16">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -412,7 +469,7 @@
 <edge COLOR="#808080" STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
 </node>
-<node COLOR="#00b439" CREATED="1361956631154" ID="ID_1734979662" MODIFIED="1362066629781" STYLE="bubble" TEXT="Fotokom&#xf3;rki ABCD">
+<node COLOR="#00b439" CREATED="1361956631154" ID="ID_1734979662" MODIFIED="1364407764941" STYLE="bubble" TEXT="Fotokom&#xf3;rki ABCD">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -426,7 +483,7 @@
 <edge COLOR="#808080" STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
 </node>
-<node COLOR="#00b439" CREATED="1361959534630" ID="ID_1216649671" MODIFIED="1362066629801" STYLE="bubble" TEXT="USB">
+<node COLOR="#00b439" CREATED="1361959534630" ID="ID_1216649671" MODIFIED="1364407764984" STYLE="bubble" TEXT="USB">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -439,10 +496,10 @@
 </html></richcontent>
 <edge COLOR="#808080" STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
-<node COLOR="#990000" CREATED="1361974800436" ID="ID_1297566231" MODIFIED="1361977275515" STYLE="bubble" TEXT="karta WiFi">
+<node COLOR="#990000" CREATED="1361974800436" ID="ID_1297566231" MODIFIED="1364407871447" STYLE="bubble" TEXT="karta WiFi">
 <font NAME="SansSerif" SIZE="14"/>
 </node>
-<node COLOR="#990000" CREATED="1361974812832" ID="ID_933283166" MODIFIED="1361977275515" STYLE="bubble" TEXT="modem GSM">
+<node COLOR="#990000" CREATED="1361974812832" ID="ID_933283166" MODIFIED="1364407877827" STYLE="bubble" TEXT="modem GSM">
 <font NAME="SansSerif" SIZE="14"/>
 </node>
 </node>
@@ -452,7 +509,7 @@
 <node COLOR="#990000" CREATED="1361959560986" ID="ID_1797540967" MODIFIED="1361977275510" STYLE="bubble" TEXT="FTDI">
 <edge COLOR="#808080"/>
 <font NAME="SansSerif" SIZE="14"/>
-<node COLOR="#111111" CREATED="1361959568272" ID="ID_1659913736" MODIFIED="1362066629840" STYLE="bubble" TEXT="USB">
+<node COLOR="#111111" CREATED="1361959568272" ID="ID_1659913736" MODIFIED="1364407765087" STYLE="bubble" TEXT="USB">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -471,7 +528,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#00b439" CREATED="1362138044081" ID="ID_800306751" MODIFIED="1362138071405" TEXT="Zworka USR">
+<node COLOR="#00b439" CREATED="1362138044081" ID="ID_800306751" MODIFIED="1364407765121" TEXT="Zworka USR">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -485,11 +542,26 @@
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
 </node>
+<node COLOR="#00b439" CREATED="1364407827962" ID="ID_204389358" MODIFIED="1364408354597" TEXT="Karta ethernet">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Wbudowana w modu&#322; karta sieciowa - eth0.
+    </p>
+  </body>
+</html>
+</richcontent>
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+</node>
 </node>
 <node COLOR="#0033ff" CREATED="1361990322439" ID="ID_835665368" MODIFIED="1362139087568" POSITION="left" TEXT="           &apos;how_to_begin.sh&apos; &#xa;czyli jak zacz&#x105;&#x107; prac&#x119; z projektem">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
-<node COLOR="#00b439" CREATED="1361991567243" ID="ID_1597294584" MODIFIED="1362159922867" TEXT="pobranie projektu">
+<node COLOR="#00b439" CREATED="1361991567243" ID="ID_1597294584" MODIFIED="1364407765166" TEXT="pobranie projektu">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -519,7 +591,7 @@
 <font NAME="SansSerif" SIZE="16"/>
 <icon BUILTIN="full-1"/>
 </node>
-<node COLOR="#00b439" CREATED="1361991578658" ID="ID_249111711" MODIFIED="1362321266754" TEXT="kompilacja">
+<node COLOR="#00b439" CREATED="1361991578658" ID="ID_249111711" MODIFIED="1364407765195" TEXT="kompilacja">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -555,7 +627,7 @@
 <font NAME="SansSerif" SIZE="16"/>
 <icon BUILTIN="full-2"/>
 </node>
-<node COLOR="#00b439" CREATED="1361991592171" ID="ID_1705591639" MODIFIED="1362066630042" TEXT="zaprogramowanie modu&#x142;u">
+<node COLOR="#00b439" CREATED="1361991592171" ID="ID_1705591639" MODIFIED="1364407765215" TEXT="zaprogramowanie modu&#x142;u">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -573,7 +645,7 @@
 <font NAME="SansSerif" SIZE="16"/>
 <icon BUILTIN="full-3"/>
 </node>
-<node COLOR="#00b439" CREATED="1361991625626" ID="ID_400248337" MODIFIED="1362066630089" TEXT="&#x15b;rodowisko lokalne">
+<node COLOR="#00b439" CREATED="1361991625626" ID="ID_400248337" MODIFIED="1364407765239" TEXT="&#x15b;rodowisko lokalne">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -600,7 +672,7 @@
 <font NAME="SansSerif" SIZE="16"/>
 <icon BUILTIN="full-4"/>
 </node>
-<node COLOR="#00b439" CREATED="1362139088466" ID="ID_83905103" MODIFIED="1362139595248" TEXT="opcjonalna konfiguracja">
+<node COLOR="#00b439" CREATED="1362139088466" ID="ID_83905103" MODIFIED="1364407765257" TEXT="opcjonalna konfiguracja">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -623,7 +695,7 @@
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <arrowlink COLOR="#ffd700" DESTINATION="ID_546530039" ENDARROW="Default" ENDINCLINATION="350;0;" ID="Arrow_ID_1281355675" STARTARROW="None" STARTINCLINATION="350;0;"/>
 <font NAME="SansSerif" SIZE="18"/>
-<node COLOR="#00b439" CREATED="1361989843447" ID="ID_1572180523" MODIFIED="1362137967916" TEXT="buildroot">
+<node COLOR="#00b439" CREATED="1361989843447" ID="ID_1572180523" MODIFIED="1364407765281" TEXT="buildroot">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -639,7 +711,7 @@
 </html></richcontent>
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
-<node COLOR="#990000" CREATED="1361994205003" ID="ID_93946501" MODIFIED="1362066630137" TEXT="make menuconfig">
+<node COLOR="#990000" CREATED="1361994205003" ID="ID_93946501" MODIFIED="1364407765297" TEXT="make menuconfig">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -652,7 +724,7 @@
 </html></richcontent>
 <font NAME="SansSerif" SIZE="14"/>
 </node>
-<node COLOR="#990000" CREATED="1361994198019" ID="ID_853953599" MODIFIED="1363286214675" TEXT="make newicd">
+<node COLOR="#990000" CREATED="1361994198019" ID="ID_853953599" MODIFIED="1364407765315" TEXT="make newicd">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -665,11 +737,10 @@
       Nalezy uruchomi&#263; po wykonaniu poprawek w icd.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <font NAME="SansSerif" SIZE="14"/>
 </node>
-<node COLOR="#990000" CREATED="1361994198019" ID="ID_1338275509" MODIFIED="1363286235500" TEXT="make newlinux">
+<node COLOR="#990000" CREATED="1361994198019" ID="ID_1338275509" MODIFIED="1364407765335" TEXT="make newlinux">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -682,11 +753,10 @@
       Nalezy uruchomi&#263; po wykonaniu poprawek w kernelu.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <font NAME="SansSerif" SIZE="14"/>
 </node>
-<node COLOR="#990000" CREATED="1361995244954" ID="ID_714174932" MODIFIED="1363286214181" TEXT="make">
+<node COLOR="#990000" CREATED="1361995244954" ID="ID_714174932" MODIFIED="1364407765356" TEXT="make">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -702,11 +772,10 @@
       funkcji gets(). Nalezy kompilowa&#263; przez {factory}/night.sh lub na serwerze.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <font NAME="SansSerif" SIZE="14"/>
 </node>
-<node COLOR="#990000" CREATED="1361994151707" ID="ID_604775108" MODIFIED="1363286213832" TEXT="fs/skeleton-icdtcp3/">
+<node COLOR="#990000" CREATED="1361994151707" ID="ID_604775108" MODIFIED="1364407765377" TEXT="fs/skeleton-icdtcp3/">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -719,11 +788,10 @@
       do obrazu systemu.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <font NAME="SansSerif" SIZE="14"/>
 </node>
-<node COLOR="#990000" CREATED="1361994260075" ID="ID_1567973" MODIFIED="1363286213093" TEXT="__outputs">
+<node COLOR="#990000" CREATED="1361994260075" ID="ID_1567973" MODIFIED="1364407765397" TEXT="__outputs">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -736,12 +804,11 @@
       Bie&#380;&#261;ca kompilacja znajduje si&#281; w output, razem z kompilatorem u&#380;ywanym przy arm_icd_compilation.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <font NAME="SansSerif" SIZE="14"/>
 </node>
 </node>
-<node COLOR="#00b439" CREATED="1361989874927" ID="ID_1242004422" MODIFIED="1362137967919" TEXT="icd">
+<node COLOR="#00b439" CREATED="1361989874927" ID="ID_1242004422" MODIFIED="1364407765418" TEXT="icd">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -758,7 +825,7 @@
 <edge STYLE="bezier" WIDTH="thin"/>
 <arrowlink COLOR="#ffd700" DESTINATION="ID_1572180523" ENDARROW="Default" ENDINCLINATION="119;0;" ID="Arrow_ID_688374039" STARTARROW="None" STARTINCLINATION="119;0;"/>
 <font NAME="SansSerif" SIZE="16"/>
-<node COLOR="#990000" CREATED="1362064179289" ID="ID_934026059" MODIFIED="1362064384659" TEXT="src">
+<node COLOR="#990000" CREATED="1362064179289" ID="ID_934026059" MODIFIED="1364407765441" TEXT="src">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -773,7 +840,7 @@
   </body>
 </html></richcontent>
 <font NAME="SansSerif" SIZE="14"/>
-<node COLOR="#111111" CREATED="1362064248168" ID="ID_86784941" MODIFIED="1362065399879" TEXT="gsoap">
+<node COLOR="#111111" CREATED="1362064248168" ID="ID_86784941" MODIFIED="1364407765462" TEXT="gsoap">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -789,7 +856,7 @@
 </html></richcontent>
 </node>
 </node>
-<node COLOR="#990000" CREATED="1362064200689" ID="ID_878160728" MODIFIED="1362064675095" TEXT="scripts">
+<node COLOR="#990000" CREATED="1362064200689" ID="ID_878160728" MODIFIED="1364407765483" TEXT="scripts">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -811,7 +878,7 @@
 </html></richcontent>
 <font NAME="SansSerif" SIZE="14"/>
 </node>
-<node COLOR="#990000" CREATED="1362064186529" ID="ID_984245859" MODIFIED="1362064767230" TEXT="share">
+<node COLOR="#990000" CREATED="1362064186529" ID="ID_984245859" MODIFIED="1364407765499" TEXT="share">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -824,7 +891,7 @@
 </html></richcontent>
 <font NAME="SansSerif" SIZE="14"/>
 </node>
-<node COLOR="#990000" CREATED="1362064210346" ID="ID_1600635696" MODIFIED="1362066630281" TEXT="www">
+<node COLOR="#990000" CREATED="1362064210346" ID="ID_1600635696" MODIFIED="1364407765515" TEXT="www">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -842,7 +909,7 @@
 <font NAME="SansSerif" SIZE="14"/>
 </node>
 </node>
-<node COLOR="#00b439" CREATED="1361989917303" ID="ID_1011028581" MODIFIED="1363286052268" TEXT="linux">
+<node COLOR="#00b439" CREATED="1361989917303" ID="ID_1011028581" MODIFIED="1364407765539" TEXT="linux">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -858,11 +925,10 @@
       make ARCH=arm CROSS_COMPILE=arm-linux- <i>polecenie</i>
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
-<node COLOR="#990000" CREATED="1363285626080" ID="ID_1687498360" MODIFIED="1363286078693" TEXT="make menuconfig">
+<node COLOR="#990000" CREATED="1363285626080" ID="ID_1687498360" MODIFIED="1364407765564" TEXT="make menuconfig">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -887,11 +953,10 @@
       git commit
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <font NAME="SansSerif" SIZE="14"/>
 </node>
-<node COLOR="#990000" CREATED="1363285955147" ID="ID_80825288" MODIFIED="1363286295349" TEXT="pliki">
+<node COLOR="#990000" CREATED="1363285955147" ID="ID_80825288" MODIFIED="1364407765585" TEXT="pliki">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -907,12 +972,11 @@
       Drivery: drivers / icdtcp3 / *
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <font NAME="SansSerif" SIZE="14"/>
 </node>
 </node>
-<node COLOR="#00b439" CREATED="1361989953999" ID="ID_11691733" MODIFIED="1362065169066" TEXT="at91bootstrap">
+<node COLOR="#00b439" CREATED="1361989953999" ID="ID_11691733" MODIFIED="1364407765606" TEXT="at91bootstrap">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -929,7 +993,7 @@
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
 </node>
-<node COLOR="#00b439" CREATED="1361989984071" ID="ID_146635606" MODIFIED="1362065210290" TEXT="u-boot">
+<node COLOR="#00b439" CREATED="1361989984071" ID="ID_146635606" MODIFIED="1364407765624" TEXT="u-boot">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -947,7 +1011,7 @@
 <node COLOR="#0033ff" CREATED="1361990113455" ID="ID_1321429431" MODIFIED="1361990942115" POSITION="left" TEXT="    repozytoria&#xa;&#x15b;rodowiska pracy">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
-<node COLOR="#00b439" CREATED="1361989884783" ID="ID_1979515212" MODIFIED="1362066630331" TEXT="scripts">
+<node COLOR="#00b439" CREATED="1361989884783" ID="ID_1979515212" MODIFIED="1364407765651" TEXT="scripts">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -960,7 +1024,7 @@
 </html></richcontent>
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
-<node COLOR="#990000" CREATED="1361990233447" ID="ID_846327775" MODIFIED="1362066630348" TEXT="icdtcp3-flash.sh">
+<node COLOR="#990000" CREATED="1361990233447" ID="ID_846327775" MODIFIED="1364407765688" TEXT="icdtcp3-flash.sh">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -974,7 +1038,7 @@
 <font NAME="SansSerif" SIZE="14"/>
 </node>
 </node>
-<node COLOR="#00b439" CREATED="1361989866623" ID="ID_830333123" MODIFIED="1362066630369" TEXT="factory">
+<node COLOR="#00b439" CREATED="1361989866623" ID="ID_830333123" MODIFIED="1364407765724" TEXT="factory">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -990,7 +1054,7 @@
 </html></richcontent>
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
-<node COLOR="#990000" CREATED="1361993009705" ID="ID_514329438" MODIFIED="1362066630390" TEXT="INFO">
+<node COLOR="#990000" CREATED="1361993009705" ID="ID_514329438" MODIFIED="1364407765766" TEXT="INFO">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -1003,7 +1067,7 @@
 </html></richcontent>
 <font NAME="SansSerif" SIZE="14"/>
 </node>
-<node COLOR="#990000" CREATED="1361990285615" ID="ID_432970373" MODIFIED="1362138327744" TEXT="bash_env">
+<node COLOR="#990000" CREATED="1361990285615" ID="ID_432970373" MODIFIED="1364407765786" TEXT="bash_env">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -1030,14 +1094,14 @@
 </node>
 <node COLOR="#990000" CREATED="1361990280327" ID="ID_1660220833" MODIFIED="1361990283733" TEXT="project_docs/">
 <font NAME="SansSerif" SIZE="14"/>
-<node COLOR="#111111" CREATED="1361994811995" ID="ID_1444870573" MODIFIED="1363286311490">
+<node COLOR="#111111" CREATED="1361994811995" ID="ID_1444870573" MODIFIED="1364408138345">
 <richcontent TYPE="NODE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      &#160;&#160;THIS document<br />(project_icdtcp3.mm)
+      &#160;THIS document<br />(project_icdtcp3.mm)
     </p>
   </body>
 </html>
@@ -1067,7 +1131,7 @@
 <icon BUILTIN="idea"/>
 </node>
 </node>
-<node COLOR="#990000" CREATED="1361991442796" ID="ID_573186179" MODIFIED="1362066249374" TEXT="how_to_begin.sh">
+<node COLOR="#990000" CREATED="1361991442796" ID="ID_573186179" MODIFIED="1364407765836" TEXT="how_to_begin.sh">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -1081,7 +1145,7 @@
 <arrowlink COLOR="#ffd700" DESTINATION="ID_1597294584" ENDARROW="Default" ENDINCLINATION="321;0;" ID="Arrow_ID_1273918037" STARTARROW="None" STARTINCLINATION="321;0;"/>
 <font NAME="SansSerif" SIZE="14"/>
 </node>
-<node COLOR="#990000" CREATED="1361995395907" ID="ID_937614028" MODIFIED="1362066407697" TEXT="night.sh">
+<node COLOR="#990000" CREATED="1361995395907" ID="ID_937614028" MODIFIED="1364407765855" TEXT="night.sh">
 <richcontent TYPE="NOTE"><html>
   <head>
     
