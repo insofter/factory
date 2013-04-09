@@ -16,13 +16,13 @@ if [ "$image_cattus" != "" ]
 then
   echo "[c] :: $image_cattus (cattus.info) [default]"
 fi
+if [ "$image_old" != "" ]
+then
+  echo "[o] :: $image_old (old image) [last used]"
+fi
 if [ "$image_local" != "" ]
 then
   echo "[l] :: $image_local (local workdir)"
-fi
-if [ "$image_old" != "" ]
-then
-  echo "[o] :: $image_old (last used)"
 fi
 
 echo
