@@ -167,8 +167,7 @@
       po zmianie parametr&#243;w w bazie danych.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <edge COLOR="#808080"/>
 <arrowlink COLOR="#ffd700" DESTINATION="ID_251290198" ENDARROW="Default" ENDINCLINATION="187;0;" ID="Arrow_ID_1085428275" STARTARROW="None" STARTINCLINATION="187;0;"/>
 <font NAME="SansSerif" SIZE="12"/>
@@ -552,8 +551,7 @@
       Wbudowana w modu&#322; karta sieciowa - eth0.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
 </node>
@@ -993,7 +991,7 @@
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
 </node>
-<node COLOR="#00b439" CREATED="1361989984071" ID="ID_146635606" MODIFIED="1364407765624" TEXT="u-boot">
+<node COLOR="#00b439" CREATED="1361989984071" ID="ID_146635606" MODIFIED="1365851340628" TEXT="u-boot">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -1035,6 +1033,21 @@
     </p>
   </body>
 </html></richcontent>
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+<node COLOR="#990000" CREATED="1365851154643" ID="ID_820137263" MODIFIED="1365851340629" TEXT="icdtcp3-reset.bin">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Odpowiednio skompilowany U-boot, np za pomoc&#261; compile_icdtcp3-reset.bin.sh
+    </p>
+  </body>
+</html>
+</richcontent>
+<arrowlink COLOR="#ffd700" DESTINATION="ID_146635606" ENDARROW="Default" ENDINCLINATION="231;0;" ID="Arrow_ID_57349207" STARTARROW="None" STARTINCLINATION="231;0;"/>
 <font NAME="SansSerif" SIZE="14"/>
 </node>
 </node>
@@ -1104,8 +1117,7 @@
       &#160;THIS document<br />(project_icdtcp3.mm)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <richcontent TYPE="NOTE"><html>
   <head>
     

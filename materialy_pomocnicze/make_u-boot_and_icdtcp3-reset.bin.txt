@@ -1,0 +1,20 @@
+
+Compiling u-boot (usually by buildroot):
+    make ARCH=arm CROSS_COMPILE=arm-linux- icdtcp3
+
+
+
+Compiling for scripts/icdtcp3-reset.bin:
+    edit 'include/configs/icdtcp3.h'
+      from:
+        #define CONFIG_BOOTCOMMAND "tftp $loadaddr flash-script.img; source $loadaddr"
+
+      to:
+        #define CONFIG_BOOTCOMMAND "env set bootcmd 'tftp $loadaddr flash-script.img; source $loadaddr'; env save; reset"
+
+    and run:
+      make ARCH=arm CROSS_COMPILE=arm-linux- icdtcp3
+
+    or use: compile_icdtcp3-reset.bin.sh
+
+
