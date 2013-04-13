@@ -1,0 +1,18 @@
+Ethernet is needed for next stages of programming. 
+You need to configure ip for server (tftp) and for client.
+
+u-boot
+  include/configs/icdtcp3.h
+    #define CONFIG_SERVERIP 192.168.123.70
+    #define CONFIG_IPADDR 192.168.123.79
+
+scripts
+  icdtcp3-reset.bin (special u-boot compiled by u-boot/compile_icdtcp3-reset.bin.sh)
+
+buildroot
+  fs/skeleton-icdtcp3-prog/usr/bin/icdtcp3-program
+    info "Setting up eth0 address to 192.168.123.79"
+    ifconfig eth0 192.168.123.79
+    curl -O tftp://192.168.123.70/icdtcp3.img
+
+

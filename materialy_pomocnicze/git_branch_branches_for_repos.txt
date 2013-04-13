@@ -2,17 +2,24 @@
 #git checkout {branch} after git clone (or how_to_begin_stage_II.sh)
 
 
+at91bootstrap
+  master
+
 buildroot
-* icdtcp3-2011.11
+  icdtcp3-2011.11
 
 factory
-* master
+  master
 
 icd
-* master
+  master
 
 linux
-* 3.1.4-icdtcp3
+  3.1.4-icdtcp3
 
 scripts
-* master
+  master
+
+u-boot
+  icdtcp3-v2011.12
+
