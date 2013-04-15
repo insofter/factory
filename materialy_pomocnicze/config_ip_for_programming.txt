@@ -8,6 +8,7 @@ u-boot
 
 scripts
   icdtcp3-reset.bin (special u-boot compiled by u-boot/compile_icdtcp3-reset.bin.sh)
+  icdtcp3-uImage-prog (special buildroot (output/images/uImage) compiled by 'factory/night.sh prog')
 
 buildroot
   fs/skeleton-icdtcp3-prog/usr/bin/icdtcp3-program

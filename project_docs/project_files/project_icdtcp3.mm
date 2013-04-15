@@ -693,7 +693,7 @@
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <arrowlink COLOR="#ffd700" DESTINATION="ID_546530039" ENDARROW="Default" ENDINCLINATION="350;0;" ID="Arrow_ID_1281355675" STARTARROW="None" STARTINCLINATION="350;0;"/>
 <font NAME="SansSerif" SIZE="18"/>
-<node COLOR="#00b439" CREATED="1361989843447" ID="ID_1572180523" MODIFIED="1364407765281" TEXT="buildroot">
+<node COLOR="#00b439" CREATED="1361989843447" ID="ID_1572180523" MODIFIED="1366017915057" TEXT="buildroot">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -706,7 +706,8 @@
       w tym odno&#347;niki do innych repozytori&#243;w (icd dost&#281;pnego lokalnie, a innych serwera).
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
 <node COLOR="#990000" CREATED="1361994205003" ID="ID_93946501" MODIFIED="1364407765297" TEXT="make menuconfig">
@@ -789,7 +790,24 @@
 </html></richcontent>
 <font NAME="SansSerif" SIZE="14"/>
 </node>
-<node COLOR="#990000" CREATED="1361994260075" ID="ID_1567973" MODIFIED="1364407765397" TEXT="__outputs">
+<node COLOR="#990000" CREATED="1366017919139" ID="ID_1606057413" MODIFIED="1366018161706" TEXT="fs/skeleton-icdtcp3-prog/">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Szkielet systemu u&#380;ywanego do programowania modu&#322;u. Nale&#380;y kompilowa&#263; przez 'factory/night.sh prog'.
+    </p>
+    <p>
+      Plik output/images/uImage nale&#380;y przenie&#347;&#263; do scripts/icdtcp3-uImage-prog.
+    </p>
+  </body>
+</html>
+</richcontent>
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+<node COLOR="#990000" CREATED="1361994260075" ID="ID_1567973" MODIFIED="1366017901454" TEXT="__outputs">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -802,7 +820,8 @@
       Bie&#380;&#261;ca kompilacja znajduje si&#281; w output, razem z kompilatorem u&#380;ywanym przy arm_icd_compilation.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <font NAME="SansSerif" SIZE="14"/>
 </node>
 </node>
@@ -1045,13 +1064,12 @@
       Odpowiednio skompilowany U-boot, np za pomoc&#261; compile_icdtcp3-reset.bin.sh
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <arrowlink COLOR="#ffd700" DESTINATION="ID_146635606" ENDARROW="Default" ENDINCLINATION="231;0;" ID="Arrow_ID_57349207" STARTARROW="None" STARTINCLINATION="231;0;"/>
 <font NAME="SansSerif" SIZE="14"/>
 </node>
 </node>
-<node COLOR="#00b439" CREATED="1361989866623" ID="ID_830333123" MODIFIED="1364407765724" TEXT="factory">
+<node COLOR="#00b439" CREATED="1361989866623" ID="ID_830333123" MODIFIED="1366018187000" TEXT="factory">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -1188,6 +1206,23 @@
     </p>
   </body>
 </html></richcontent>
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+<node COLOR="#990000" CREATED="1366018187003" ID="ID_159226704" MODIFIED="1366018262657" TEXT="flash_icdtcp3.sh">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      S&#322;u&#380;y do programowania modu&#322;u.
+    </p>
+    <p>
+      Programowane wymaga skompilowanego przynajmniej raz projektu.
+    </p>
+  </body>
+</html>
+</richcontent>
 <font NAME="SansSerif" SIZE="14"/>
 </node>
 </node>

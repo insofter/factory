@@ -53,10 +53,13 @@ then
   mv .config .config.old
 fi
 
-make icdtcp3_defconfig
-echo "make icdtcp3_defconfig" | tee -a ../night_${DATE}.all.log
-
-
+if [ "$1" = "prog" ]; then
+  make icdtcp3_prog_defconfig
+  echo "make icdtcp3_prog_defconfig" | tee -a ../night_${DATE}.all.log
+else
+  make icdtcp3_defconfig
+  echo "make icdtcp3_defconfig" | tee -a ../night_${DATE}.all.log
+fi
 
 
 #kompilujemy całość do błedu z getsem
