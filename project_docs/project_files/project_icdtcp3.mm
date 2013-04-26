@@ -706,8 +706,7 @@
       w tym odno&#347;niki do innych repozytori&#243;w (icd dost&#281;pnego lokalnie, a innych serwera).
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
 <node COLOR="#990000" CREATED="1361994205003" ID="ID_93946501" MODIFIED="1364407765297" TEXT="make menuconfig">
@@ -803,8 +802,7 @@
       Plik output/images/uImage nale&#380;y przenie&#347;&#263; do scripts/icdtcp3-uImage-prog.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <font NAME="SansSerif" SIZE="14"/>
 </node>
 <node COLOR="#990000" CREATED="1361994260075" ID="ID_1567973" MODIFIED="1366017901454" TEXT="__outputs">
@@ -820,8 +818,7 @@
       Bie&#380;&#261;ca kompilacja znajduje si&#281; w output, razem z kompilatorem u&#380;ywanym przy arm_icd_compilation.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <font NAME="SansSerif" SIZE="14"/>
 </node>
 </node>
@@ -1028,7 +1025,7 @@
 <node COLOR="#0033ff" CREATED="1361990113455" ID="ID_1321429431" MODIFIED="1361990942115" POSITION="left" TEXT="    repozytoria&#xa;&#x15b;rodowiska pracy">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
-<node COLOR="#00b439" CREATED="1361989884783" ID="ID_1979515212" MODIFIED="1364407765651" TEXT="scripts">
+<node COLOR="#00b439" CREATED="1361989884783" ID="ID_1979515212" MODIFIED="1366971374406" TEXT="scripts">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -1066,6 +1063,20 @@
   </body>
 </html></richcontent>
 <arrowlink COLOR="#ffd700" DESTINATION="ID_146635606" ENDARROW="Default" ENDINCLINATION="231;0;" ID="Arrow_ID_57349207" STARTARROW="None" STARTINCLINATION="231;0;"/>
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+<node COLOR="#990000" CREATED="1366971374412" ID="ID_1175042373" MODIFIED="1366971457739" TEXT="icdtcp3-uImage-prog">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Obraz systemu skompilowany przez '{factory}/night.sh prog'.
+    </p>
+  </body>
+</html>
+</richcontent>
 <font NAME="SansSerif" SIZE="14"/>
 </node>
 </node>
@@ -1221,8 +1232,7 @@
       Programowane wymaga skompilowanego przynajmniej raz projektu.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <font NAME="SansSerif" SIZE="14"/>
 </node>
 </node>
