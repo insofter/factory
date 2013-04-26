@@ -1,7 +1,7 @@
 #!/bin/bash
 
 www_dir=/srv/http
-img_path=http://192.168.2.200/aa.img
+img_path=http://192.168.123.70/aa.img
 icd_user=admin
 sudo=sudo #can be empty for root
 
