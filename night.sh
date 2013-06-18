@@ -143,5 +143,7 @@ echo -ne "\033]0;"Terminal"\007"
 
 if [ -e /tmp/night-poweroff ]
 then
-  sudo -n shutdown -h now
+  sudo -n shutdown -h now 
+  #fallback
+  sudo systemctl poweroff
 fi
