@@ -39,7 +39,7 @@
 <edge COLOR="#808080" STYLE="bezier" WIDTH="thin"/>
 <arrowlink COLOR="#ffd700" DESTINATION="ID_604775108" ENDARROW="Default" ENDINCLINATION="807;0;" ID="Arrow_ID_1027486490" STARTARROW="None" STARTINCLINATION="807;0;"/>
 <font NAME="SansSerif" SIZE="16"/>
-<node COLOR="#990000" CREATED="1361951391991" ID="ID_15166884" MODIFIED="1364407764450" STYLE="bubble" TEXT="S40icd">
+<node COLOR="#990000" CREATED="1361951391991" ID="ID_15166884" MODIFIED="1370858784286" STYLE="bubble" TEXT="S40icd">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -235,7 +235,7 @@
 <font NAME="SansSerif" SIZE="12"/>
 </node>
 </node>
-<node COLOR="#111111" CREATED="1364405997885" ID="ID_554811297" MODIFIED="1364407877828" TEXT="GSM - ppp0">
+<node COLOR="#111111" CREATED="1364405997885" ID="ID_554811297" MODIFIED="1370857716586" TEXT="GSM - ppp0">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -244,13 +244,75 @@
     <p>
       Funkcje gsm_*() obs&#322;uguj&#261;ce po&#322;&#261;czenie GSM.
     </p>
+  </body>
+</html>
+</richcontent>
+<arrowlink COLOR="#ffd700" DESTINATION="ID_933283166" ENDARROW="Default" ENDINCLINATION="419;0;" ID="Arrow_ID_1850145407" STARTARROW="None" STARTINCLINATION="419;0;"/>
+<node COLOR="#111111" CREATED="1370857716548" ID="ID_477049693" MODIFIED="1370858710543" TEXT="$ICD_SHARE_DIR/common_wvdial.conf">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
     <p>
-      Nie zaimplementowane.
+      Polecenia dla wvdial'a niezale&#380;ne od modemu: stan kodu PIN/PUK itd.
     </p>
   </body>
-</html></richcontent>
-<arrowlink COLOR="#ffd700" DESTINATION="ID_933283166" ENDARROW="Default" ENDINCLINATION="419;0;" ID="Arrow_ID_1850145407" STARTARROW="None" STARTINCLINATION="419;0;"/>
-<icon BUILTIN="button_cancel"/>
+</html>
+</richcontent>
+</node>
+<node COLOR="#111111" CREATED="1370857759563" ID="ID_1535498483" MODIFIED="1370858735810" TEXT="$ICD_SHARE_DIR/gsm/{PROVIDER}+{MODEM}/*">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      &gt;&gt; cat info
+    </p>
+    <p>
+      wvdial.conf - config for wvdial with one or two dialers:
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;- startgsm for connecting
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;- setpin for initializing with pin number (only for config with pin)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;__GSM__PIN__ should be replaced with pin number
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      modeswitch.conf - config for changingm modem from mass storage to modem
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;- Checking if modem is initialized: check if exists file from
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;'Modem = /dev/ttyUSBX' line in wvdial.conf
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      pin.conf - defines pin management during start:
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;- none or no file: do not initialize with pin, pin disabled in this config
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;- sequence: wvdial setpin ; wvdial startgsm
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;- together: wvdial setpin startgsm
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
 </node>
 <node COLOR="#111111" CREATED="1364406071691" ID="ID_295039692" MODIFIED="1364406115584" TEXT="icd-net-route-resolv">
 <richcontent TYPE="NOTE"><html>
@@ -282,22 +344,7 @@
 <arrowlink COLOR="#ffd700" DESTINATION="ID_559770647" ENDARROW="Default" ENDINCLINATION="139;0;" ID="Arrow_ID_1819172573" STARTARROW="None" STARTINCLINATION="139;0;"/>
 </node>
 </node>
-<node COLOR="#111111" CREATED="1361955426571" ID="ID_1531893197" MODIFIED="1364405825008" STYLE="bubble" TEXT="icd-itd-demon">
-<richcontent TYPE="NOTE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      Demon obs&#322;uguj&#261;cy informacje z fotokom&#243;rek.
-    </p>
-  </body>
-</html></richcontent>
-<edge COLOR="#808080"/>
-<arrowlink COLOR="#ffd700" DESTINATION="ID_1734979662" ENDARROW="Default" ENDINCLINATION="188;0;" ID="Arrow_ID_1825416628" STARTARROW="None" STARTINCLINATION="188;0;"/>
-<font NAME="SansSerif" SIZE="12"/>
-</node>
-<node COLOR="#111111" CREATED="1361955407056" ID="ID_1660704319" MODIFIED="1364407764696" STYLE="bubble" TEXT="icd-fc-daemon">
+<node COLOR="#111111" CREATED="1361955407056" ID="ID_1660704319" MODIFIED="1370858794825" STYLE="bubble" TEXT="icd-fc-daemon">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -307,12 +354,47 @@
       Demon obs&#322;uguj&#261;cy wy&#347;wietlacz 2x16 i klawisze.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <edge COLOR="#808080"/>
 <arrowlink COLOR="#ffd700" DESTINATION="ID_251290198" ENDARROW="Default" ENDINCLINATION="132;0;" ID="Arrow_ID_685675608" STARTARROW="None" STARTINCLINATION="132;0;"/>
 <arrowlink COLOR="#ffd700" DESTINATION="ID_1332600065" ENDARROW="Default" ENDINCLINATION="566;0;" ID="Arrow_ID_413119158" STARTARROW="None" STARTINCLINATION="566;0;"/>
 <arrowlink COLOR="#ffd700" DESTINATION="ID_59812596" ENDARROW="Default" ENDINCLINATION="619;0;" ID="Arrow_ID_583410413" STARTARROW="None" STARTINCLINATION="619;0;"/>
 <font NAME="SansSerif" SIZE="12"/>
+</node>
+<node COLOR="#111111" CREATED="1370858784296" ID="ID_850738846" MODIFIED="1370858841986" TEXT="COUNTERS NOWA WERSJA">
+<icon BUILTIN="yes"/>
+<icon BUILTIN="yes"/>
+<icon BUILTIN="yes"/>
+<node COLOR="#111111" CREATED="1361955426571" ID="ID_1531893197" MODIFIED="1370858810207" STYLE="bubble" TEXT="icd-itd-demon">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Demon obs&#322;uguj&#261;cy informacje z fotokom&#243;rek. (pojedynczy pomiar)
+    </p>
+  </body>
+</html>
+</richcontent>
+<edge COLOR="#808080"/>
+<arrowlink COLOR="#ffd700" DESTINATION="ID_1734979662" ENDARROW="Default" ENDINCLINATION="188;0;" ID="Arrow_ID_1825416628" STARTARROW="None" STARTINCLINATION="188;0;"/>
+<font NAME="SansSerif" SIZE="12"/>
+</node>
+<node COLOR="#111111" CREATED="1370858752794" ID="ID_1938368276" MODIFIED="1370858830645" TEXT="icd-counters">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Nowa wersja, prostsza, multi kom&#243;rkowa.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
 </node>
 </node>
 <node COLOR="#990000" CREATED="1361955492824" ID="ID_1149453662" MODIFIED="1364407764719" STYLE="bubble" TEXT="S80lighttpd">
@@ -1075,8 +1157,7 @@
       Obraz systemu skompilowany przez '{factory}/night.sh prog'.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <font NAME="SansSerif" SIZE="14"/>
 </node>
 </node>
