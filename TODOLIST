@@ -1,0 +1,53 @@
+/*** TODO list ***/
+prog:
+time: uboot 15s; linux-prog 30s; linux-full 2m30s
+ 
+hw:
+	find me: 
+		cd /sys/class/leds/usr/; echo timer > trigger; 
+		echo 100 > delay_on; echo 50 > delay_off
+	hotplug mac change (udhcpc cos miesza)
+gsm:
+	e367 nie działa
+	status na stronie
+	inicjalizacja łączna
+	zliczanie danych
+	cat /proc/net/dev | awk '/ppp0/ {print "r="$2 " t="$10}'
+wifi:
+	+inne karty: firmware z katalogu, mdev
+	-calling crda to update world regulatory domain
+	--Atheros AR9271
+	--rtl8712
+	++rtl8187
+hw:
+	+gpio 105 buzzer
+	~multiplekser itd
+	rs232: arch/arm/mach-at91/board-icdtcp3.c 
+icd:
+	icd-itd-daemon
+	itd-device
+	itd-vds
+	virtual-device
+	nowy okres zliczania z wejścia fotokomórki 
+
+php:
+	gsm: pin puk
+	
+
+/*** TOCHK list ***/
+	+gpio  92 backlight
+	podwojne fotokomórki
+
+
+/*** TOASK list ***/
+
+/*** LATER ***/
+php:
+	szare nieaktywne
+ID:
+	-Read device Chip ID at 0xfffff240 --- get 0x019803a2
+	-Nandflash ID is 0xA514D3EC
+soft_version ==>> soft_type @ webservice
+
+ui-icons_454545_256x240
+test dla nieaktywnych
