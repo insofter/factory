@@ -1,0 +1,15 @@
+Muliplexer with for example atmega microprocessor, communicating with RS-232.
+  ICD >> MX: 1372155397 //current time for synchronisation
+  ICD >> MX: t          //run test
+  MX >> ICD: 8 1372155397 122342 1 //fotocell unixtime.sec .usec event.val
+  MX >> ICD: t 8 2                 //test fotocell test value
+every message ended with '\n'.
+Next will be needed small app for reading that communication and writing to 
+pipes (mknod /tmp/itd8 p).
+
+new devices should be added to {icd}/www/inc/c_icdtcp.php: 
+  $this->urzadzenia (line 64)
+
+ 
+
+
