@@ -21,8 +21,6 @@ git checkout icdtcp3-2011.11
 #log circulate
 mkdir -p ../_night.log
 mv ../night_*.log ../_night.log/
-ssh ${CATTUS_USER}@cattus.info "mkdir -p ~/logs/_old/"
-ssh ${CATTUS_USER}@cattus.info "mv ~/logs/night* ~/logs/_old/; date > ~/logs/start"
 
 
 echo "pwd: `pwd`" 2>&1 | tee -a ../night_${DATE}.all.log
@@ -131,10 +129,6 @@ sudo -n beep -l 1000
 sleep 1
 sudo -n beep -l 1000
 
-
-
-ssh ${CATTUS_USER}@cattus.info "rm ~/logs/start"
-scp ../night_${DATE}.* ${CATTUS_USER}@cattus.info:logs/
 
 
 sleep 30

@@ -1,9 +1,5 @@
 #!/bin/bash
 
-if [ "${CATTUS_USER}" = "" ]
-then
-  echo "Brak zmiennej \`CATTUS_USER' !"
-fi
 if [ "${ICDTCP3_DIR}" = "" ]
 then
   echo "Brak zmiennej \`ICDTCP3_DIR' !"

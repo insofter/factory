@@ -105,8 +105,6 @@ fi
 
 
 echo "Add 'source \${ICDTCP3_DIR}/factory/bash_env.sh' to your normal user .bashrc file."
-echo "It's needed after export CATTUS_USER=\${CATTUS_USER}"
-
 echo "Read '\${ICDTCP3_DIR}/factory/INFO' file and install listed packages."
 echo DONE
 HOW_TO_BEGIN_STAGE_II
