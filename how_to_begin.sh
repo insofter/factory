@@ -19,19 +19,6 @@ then
 fi
 echo "++OK: Local user correct."
 
-
-
-echo -n "Type cattus.info user name: "
-read cattus_user
-
-ans=`ssh ${cattus_user}@cattus.info "whoami"`
-
-if ! [ "${ans}" = "${cattus_user}" ]
-then
-  echo "--ERR: Wrong cattus user!" ; exit 3
-fi
-echo "++OK: Cattus user correct."
-
 echo "gpasswd -a ${local_user} uucp"
 gpasswd -a ${local_user} uucp
 
@@ -60,7 +47,6 @@ chown -R ${local_user} /srv/tftp
 echo
 
 echo "Add 'export ICDTCP3_DIR="${icdtcp3_dir}"' to your normal user .bashrc file."
-echo "Add 'export CATTUS_USER="${cattus_user}"' to your normal user .bashrc file."
 echo "Remember to reload your shell!"
 
 cat << HOW_TO_BEGIN_STAGE_II > ${icdtcp3_dir}/how_to_begin_stage_II.sh
@@ -68,10 +54,6 @@ cat << HOW_TO_BEGIN_STAGE_II > ${icdtcp3_dir}/how_to_begin_stage_II.sh
 if [ "\$UID" = 0 ]
 then
   echo "--ERR: Run as normal user!" ; exit 1
-fi
-if [ "\${CATTUS_USER}" = "" ]
-then
-  echo "Brak zmiennej \\\`CATTUS_USER' !" ; exit 2
 fi
 if [ "\${ICDTCP3_DIR}" = "" ]
 then
@@ -82,19 +64,19 @@ cd \${ICDTCP3_DIR}
 
 if ! [ -d \${ICDTCP3_DIR}/buildroot ]
 then
-  git clone ssh://\${CATTUS_USER}@cattus.info/srv/git/buildroot || exit 1
+  git clone git@github.com:insofter/buildroot.git || exit 1
 fi
 if ! [ -d \${ICDTCP3_DIR}/icd ]
 then
-  git clone ssh://\${CATTUS_USER}@cattus.info/srv/git/icd || exit 2
+  git clone git@github.com:insofter/icd.git || exit 2
 fi
 if ! [ -d \${ICDTCP3_DIR}/scripts ]
 then
-  git clone ssh://\${CATTUS_USER}@cattus.info/srv/git/scripts || exit 3
+  git clone git@github.com:insofter/scripts.git || exit 3
 fi
 if ! [ -d \${ICDTCP3_DIR}/factory ]
 then
-  git clone ssh://\${CATTUS_USER}@cattus.info/srv/git/factory || exit 4
+  git clone git@github.com:insofter/factory.git || exit 4
 fi
 
 

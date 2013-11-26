@@ -30,7 +30,9 @@ fi
 
 export ICDTCP3_TFTP_DIR="/srv/tftp"
 export ICDTCP3_SCRIPTS_DIR="${ICDTCP3_DIR}/scripts"
-export ICDTCP3_GIT_ROOT="ssh://${CATTUS_USER}@cattus.info/srv/git"
+
+export ICDTCP3_GIT_ROOT="ssh://git@github.com:insofter"
+
 export ICDTCP3_SAM_BA_MODEM="/dev/ttyACM0"
 
 export PATH="${PATH}:${ICDTCP3_DIR}/scripts"
