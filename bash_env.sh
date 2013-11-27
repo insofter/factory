@@ -27,7 +27,7 @@ fi
 export ICDTCP3_TFTP_DIR="/srv/tftp"
 export ICDTCP3_SCRIPTS_DIR="${ICDTCP3_DIR}/scripts"
 
-export ICDTCP3_GIT_ROOT="ssh://git@github.com:insofter"
+export ICDTCP3_GIT_ROOT="git@github.com:insofter"
 
 export ICDTCP3_SAM_BA_MODEM="/dev/ttyACM0"
 
