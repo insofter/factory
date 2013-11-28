@@ -1,9 +1,5 @@
 #!/bin/bash
 
-if [ "${CATTUS_USER}" = "" ]
-then
-  echo "Brak zmiennej \`CATTUS_USER' !"
-fi
 if [ "${ICDTCP3_DIR}" = "" ]
 then
   echo "Brak zmiennej \`ICDTCP3_DIR' !"
@@ -30,7 +26,9 @@ fi
 
 export ICDTCP3_TFTP_DIR="/srv/tftp"
 export ICDTCP3_SCRIPTS_DIR="${ICDTCP3_DIR}/scripts"
-export ICDTCP3_GIT_ROOT="ssh://${CATTUS_USER}@cattus.info/srv/git"
+
+export ICDTCP3_GIT_ROOT="git@github.com:insofter"
+
 export ICDTCP3_SAM_BA_MODEM="/dev/ttyACM0"
 
 export PATH="${PATH}:${ICDTCP3_DIR}/scripts"
