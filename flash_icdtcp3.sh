@@ -1,9 +1,5 @@
 #!/bin/bash
 
-echo "Checking cattus.info..."
-image_cattus=`ssh ${CATTUS_USER}@cattus.info 'ls -1A /srv/jenkins/jobs/icdtcp3/lastSuccessful/archive/output/images/*.tar.bz2'`
-image_cattus=`basename $image_cattus`
-
 image_local=`ls -1A ${ICDTCP3_DIR}/buildroot/output/images/*.tar.bz2 2>/dev/null`
 image_local=`basename "$image_local"`
 
@@ -12,10 +8,6 @@ image_old=`basename "$image_old"`
 
 echo "Select image:"
 
-if [ "$image_cattus" != "" ]
-then
-  echo "[c] :: $image_cattus (cattus.info) [default]"
-fi
 if [ "$image_old" != "" ]
 then
   echo "[o] :: $image_old (old image) [last used]"
@@ -26,7 +18,7 @@ then
 fi
 
 echo
-echo -n "Selected image [c/l/o]: "
+echo -n "Selected image [l/o]: "
 read img
 
 if [ "$image_old" != "" ] && [ "$img" != "o" ]
@@ -36,14 +28,11 @@ then
 fi
 
 case "$img" in
-  l)
+  *)
     cp ${ICDTCP3_DIR}/buildroot/output/images/${image_local} ${ICDTCP3_DIR}/
     ;;
   o)
      #nothing to do
-    ;;
-  *)
-    scp ${CATTUS_USER}@cattus.info:/srv/jenkins/jobs/icdtcp3/lastSuccessful/archive/output/images/${image_cattus} ${ICDTCP3_DIR}/
     ;;
 esac
 

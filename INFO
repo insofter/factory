@@ -6,7 +6,7 @@ repositories:
   *  ${ICDTCP3_DIR}/buildroot
 
 .bashrc:
-  *  export CATTUS_USER=your_user
+  *  export ICDTCP3_DIR= << /home/project_icdtcp3 >> or your path
   *  source ${ICDTCP3_DIR}/factory/bash_env.sh
 
 tftp:
