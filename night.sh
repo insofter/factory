@@ -121,6 +121,17 @@ echo "Time: ${HH}h ${MM}m ${SS}s" | tee -a ../night_${DATE}.all.log
 
 echo -e "ls -lah output/images/\n`ls -lah output/images/`" | tee -a ../night_${DATE}.all.log
 
+if [ "$ICDTCP3_LOG_EXPORT_SERVER" != "" ]; then
+  if [ "$ICDTCP3_LOG_EXPORT_DIR" != "" ]; then
+    ssh "$ICDTCP3_LOG_EXPORT_SERVER" "mkdir -p ${ICDTCP3_LOG_EXPORT_DIR}"
+  else
+    ICDTCP3_LOG_EXPORT_DIR='.'
+  fi
+  ssh "$ICDTCP3_LOG_EXPORT_SERVER" rm ${ICDTCP3_LOG_EXPORT_DIR}'/night*all.log'
+  scp night*all.log "${ICDTCP3_LOG_EXPORT_SERVER}:${ICDTCP3_LOG_EXPORT_DIR}/"
+fi
+
+
 sudo -n beep -l 1000
 sleep 1
 sudo -n beep -l 1000
@@ -137,11 +148,6 @@ echo -ne "\033]0;"Terminal"\007"
 
 if [ -e /tmp/night-poweroff ]
 then
-<<<<<<< HEAD
-  sudo -n shutdown -h now 
-  #fallback
-=======
   sudo -n shutdown -h now
->>>>>>> 0cecbb5771e1e6fd9ca124d05288cbc62d3e27a1
-  sudo systemctl poweroff
+  sudo -n systemctl poweroff
 fi
