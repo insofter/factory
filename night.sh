@@ -23,7 +23,7 @@ mkdir -p ../_night.log
 mv ../night_*.log ../_night.log/
 
 
-echo "pwd: `pwd`" 2>&1 | tee -a ../night_${DATE}.all.log
+echo "    pwd: `pwd`" 2>&1 | tee -a ../night_${DATE}.all.log
 
 #przenosimy stary output
 if [ -e output ] 
@@ -33,10 +33,10 @@ then
   then
     ABOUT_ME=`cat output/_about_me`
     mv output __outputs/${ABOUT_ME}
-    echo output __outputs/${ABOUT_ME} 2>&1 | tee -a ../night_${DATE}.all.log
+    echo "    "output __outputs/${ABOUT_ME} 2>&1 | tee -a ../night_${DATE}.all.log
   else
     mv output __outputs/moved_at__${DATE}
-    echo output __outputs/moved_at__${DATE} 2>&1 | tee -a ../night_${DATE}.all.log
+    echo "    "output __outputs/moved_at__${DATE} 2>&1 | tee -a ../night_${DATE}.all.log
   fi
 fi
 
@@ -53,26 +53,26 @@ fi
 
 if [ "$1" = "prog" ]; then
   make icdtcp3_prog_defconfig
-  echo "make icdtcp3_prog_defconfig" | tee -a ../night_${DATE}.all.log
+  echo "    make icdtcp3_prog_defconfig" | tee -a ../night_${DATE}.all.log
 else
   make icdtcp3_defconfig
-  echo "make icdtcp3_defconfig" | tee -a ../night_${DATE}.all.log
+  echo "    make icdtcp3_defconfig" | tee -a ../night_${DATE}.all.log
 fi
 
 
 #kompilujemy całość do błedu z getsem
-echo "make_1 start: `date +%Y.%m.%d__%H-%M-%S`" 2>&1 | tee -a ../night_${DATE}.all.log
+echo "    make_1 start: `date +%Y.%m.%d__%H-%M-%S`" 2>&1 | tee -a ../night_${DATE}.all.log
 make 2>&1 | tee ../night_${DATE}.make_1.log
 
 if [ ${PIPESTATUS[0]} -eq 0 ] #jesli 1 make nie poszło to próbujemy naprawic getsa i puszczamy jeszcze raz
 then
   echo OK >> ../night_${DATE}.all.log 
-  echo "make_1 end: `date +%Y.%m.%d__%H-%M-%S`" 2>&1 | tee -a ../night_${DATE}.all.log
+  echo "    make_1 end: `date +%Y.%m.%d__%H-%M-%S`" 2>&1 | tee -a ../night_${DATE}.all.log
 
 else
 
   echo ERR >> ../night_${DATE}.all.log
-  echo "make_1 end: `date +%Y.%m.%d__%H-%M-%S`" 2>&1 | tee -a ../night_${DATE}.all.log
+  echo "    make_1 end: `date +%Y.%m.%d__%H-%M-%S`" 2>&1 | tee -a ../night_${DATE}.all.log
 
 
   sudo -n beep -l 1000
@@ -81,29 +81,29 @@ else
   #poprawiamy getsa (workaround)
   cat output/build/host-m4-1.4.15/lib/stdio.in.h | grep -v 'undef gets' \
     | grep -v 'gets is a security hole' > /tmp/${DATE}_stdio.h
-  echo  "cat output/build/host-m4-1.4.15/lib/stdio.in.h | grep -v 'undef gets' \
+  echo  "    cat output/build/host-m4-1.4.15/lib/stdio.in.h | grep -v 'undef gets' \
     | grep -v 'gets is a security hole' > /tmp/${DATE}_stdio.h" >> ../night_${DATE}.all.log
   mv /tmp/${DATE}_stdio.h output/build/host-m4-1.4.15/lib/stdio.in.h
-  echo "mv /tmp/${DATE}_stdio.h output/build/host-m4-1.4.15/lib/stdio.in.h" >> ../night_${DATE}.all.log
+  echo "    mv /tmp/${DATE}_stdio.h output/build/host-m4-1.4.15/lib/stdio.in.h" >> ../night_${DATE}.all.log
 
   sudo -n beep -l 1000
 
 
   #kompilujemy dalej
-  echo "make_2 start: `date +%Y.%m.%d__%H-%M-%S`" 2>&1 | tee -a ../night_${DATE}.all.log
+  echo "    make_2 start: `date +%Y.%m.%d__%H-%M-%S`" 2>&1 | tee -a ../night_${DATE}.all.log
   make 2>&1 | tee ../night_${DATE}.make_2.log ; test ${PIPESTATUS[0]} -eq 0 && echo OK \
     >> ../night_${DATE}.all.log || echo ERR >> ../night_${DATE}.all.log
-  echo "make_2 end: `date +%Y.%m.%d__%H-%M-%S`" 2>&1 | tee -a ../night_${DATE}.all.log
+  echo "    make_2 end: `date +%Y.%m.%d__%H-%M-%S`" 2>&1 | tee -a ../night_${DATE}.all.log
 
 fi #koniec proby naprawiania
 
 
 
 #budujemy pakiet
-echo "make_relpkg start: `date +%Y.%m.%d__%H-%M-%S`" 2>&1 | tee -a ../night_${DATE}.all.log
+echo "    make_relpkg start: `date +%Y.%m.%d__%H-%M-%S`" 2>&1 | tee -a ../night_${DATE}.all.log
 make relpkg 2>&1 | tee ../night_${DATE}.make_relpkg.log ; test ${PIPESTATUS[0]} -eq 0 \
   && echo OK :: DONE :: ${DATE} >> ../night_${DATE}.all.log || echo ERR >> ../night_${DATE}.all.log
-echo "make_relpkg end: `date +%Y.%m.%d__%H-%M-%S`" 2>&1 | tee -a ../night_${DATE}.all.log
+echo "    make_relpkg end: `date +%Y.%m.%d__%H-%M-%S`" 2>&1 | tee -a ../night_${DATE}.all.log
 
 
 echo -e "END\nstart: ${DATE}\nend: `date +%Y.%m.%d__%H-%M-%S`" 2>&1 | tee -a ../night_${DATE}.all.log
@@ -121,14 +121,26 @@ echo "Time: ${HH}h ${MM}m ${SS}s" | tee -a ../night_${DATE}.all.log
 
 echo -e "ls -lah output/images/\n`ls -lah output/images/`" | tee -a ../night_${DATE}.all.log
 
+
+#minilog
+MINILOG="../icdtcp3_compilation_at_$( hostname ).log"
+
+cp ../night_${DATE}.all.log $MINILOG
+
+echo -e "\n\n======== make_1 ========\n\n" >>  $MINILOG
+cat ../night_${DATE}.make_1.log | tail -30 | awk '{print "    " $0}' >>  $MINILOG
+
+echo -e "\n\n======== make_2 ========\n\n" >>  $MINILOG
+cat ../night_${DATE}.make_2.log | tail -30 | awk '{print "    " $0}' >> $MINILOG
+
+echo -e "\n\n======== make_relpkg ========\n\n" >>  $MINILOG
+cat ../night_${DATE}.make_relpkg.log | tail -30 | awk '{print "    " $0}' >> $MINILOG
+
+
+
+
 if [ "$ICDTCP3_LOG_EXPORT_SERVER" != "" ]; then
-  if [ "$ICDTCP3_LOG_EXPORT_DIR" != "" ]; then
-    ssh "$ICDTCP3_LOG_EXPORT_SERVER" "mkdir -p ${ICDTCP3_LOG_EXPORT_DIR}"
-  else
-    ICDTCP3_LOG_EXPORT_DIR='.'
-  fi
-  ssh "$ICDTCP3_LOG_EXPORT_SERVER" rm ${ICDTCP3_LOG_EXPORT_DIR}'/night*all.log'
-  scp night*all.log "${ICDTCP3_LOG_EXPORT_SERVER}:${ICDTCP3_LOG_EXPORT_DIR}/"
+  scp $MINILOG "${ICDTCP3_LOG_EXPORT_SERVER}:"
 fi
 
 
