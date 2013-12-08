@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Do you have tftp server with directory '/srv/tftp' ?"
-echo "Do you have ip set to 192.168.2.200 ?"
+echo "Do you have ip set to 192.168.123.70 ?"
 
 if [ "$UID" != 0 ]
 then

@@ -119,7 +119,7 @@ echo "Time: ${HH}h ${MM}m ${SS}s" | tee -a ../night_${DATE}.all.log
 
 
 
-echo -e "ls -lah output/images/\n`ls -lah output/images/`" | tee -a ../night_${DATE}.all.log
+echo -e "ls -lah output/images/\n`ls -lah output/images/`" | awk '{print "    " $0}' | tee -a ../night_${DATE}.all.log
 
 
 #minilog
