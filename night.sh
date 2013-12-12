@@ -19,8 +19,8 @@ git checkout icdtcp3-2011.11
 
 
 #log circulate
-mkdir -p ../_night.log
-mv ../night_*.log ../_night.log/
+mkdir -p ${ICDTCP3_DIR}/_old/logi
+mv ${ICDTCP3_DIR}/night_*.log ${ICDTCP3_DIR}/_old/logi
 
 
 echo "    pwd: `pwd`" 2>&1 | tee -a ../night_${DATE}.all.log
@@ -28,14 +28,14 @@ echo "    pwd: `pwd`" 2>&1 | tee -a ../night_${DATE}.all.log
 #przenosimy stary output
 if [ -e output ] 
 then
-  mkdir -p __outputs
+  mkdir -p ${ICDTCP3_DIR}/_old/outputs
   if [ -e output/_about_me ]
   then
     ABOUT_ME=`cat output/_about_me`
-    mv output __outputs/${ABOUT_ME}
+    mv output ${ICDTCP3_DIR}/_old/outputs/${ABOUT_ME}
     echo "    "output __outputs/${ABOUT_ME} 2>&1 | tee -a ../night_${DATE}.all.log
   else
-    mv output __outputs/moved_at__${DATE}
+    mv output ${ICDTCP3_DIR}/_old/outputs/moved_at__${DATE}
     echo "    "output __outputs/moved_at__${DATE} 2>&1 | tee -a ../night_${DATE}.all.log
   fi
 fi
