@@ -1,25 +1,21 @@
 #current working branches 
 #git checkout {branch} after git clone (or how_to_begin_stage_II.sh)
+#format repo--branch[--NC] is used by script {factory}/get_all_repos.sh 
+# --NC for default disabled checking by git_for_all.sh
 
 
-at91bootstrap
-  master
+factory--master
 
-buildroot
-  icdtcp3-2011.11
+buildroot--icdtcp3-2011.11
 
-factory
-  master
+icd--master
 
-icd
-  master
+scripts--master
 
-linux
-  3.1.4-icdtcp3
 
-scripts
-  master
+at91bootstrap--master--NC
 
-u-boot
-  icdtcp3-v2011.12
+linux--3.1.4-icdtcp3--NC
+
+u-boot--icdtcp3-v2011.12--NC
 
