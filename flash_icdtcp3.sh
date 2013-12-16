@@ -23,8 +23,8 @@ read img
 
 if [ "$image_old" != "" ] && [ "$img" != "o" ]
 then
-  mkdir -p ${ICDTCP3_DIR}/_old_img
-  mv ${ICDTCP3_DIR}/*.tar.bz2 ${ICDTCP3_DIR}/_old_img/
+  mkdir -p ${ICDTCP3_DIR}/_old/img
+  mv ${ICDTCP3_DIR}/*.tar.bz2 ${ICDTCP3_DIR}/_old/img/
 fi
 
 case "$img" in
