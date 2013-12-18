@@ -1,0 +1,47 @@
+Before start
+
+For factory programming you will need
+
+    sam-ba with configured $PATH
+    tftp server with directory /srv/tftp
+    ip address 192.168.2.200
+    and builded packages 
+
+RomBoot?
+
+Check if there is no important data on module, turn it off.
+
+Short-circuit sam-ba jumper (2 holes on left side module's board).
+
+Turn power on, wait few seconds, turn off and turn on. On connected RS-232 terminal you will see:
+
+RomBoot 
+>
+
+Turn power off, remove sam-ba jumper, connect usb-device cable to computer.
+
+Connect module to lan network with your computer and tftp server on 192.168.2.200.
+Program bootloader
+
+Turn it on. There will be new device /dev/ttyACM0. You need read-write it. Next run:
+
+./icdtcp3-flash.sh -s /dev/ttyACM0 ../../work/_BUILD/icdtcp3-0.0-25-<version>.tar.bz2
+
+or
+
+./icdtcp3-flash.sh -s /dev/ttyACM0 ../buildroot/output/images/icdtcp3-v0.1-6-g3bab6de.tar.bz2
+
+Assuming that you are in /home/insofter/project/scripts, and <version> is correct this should program bootloader.
+
+DON'T TURN THE POWER OFF!
+Downloading linux
+
+Downloading will start automatically.
+
+Be happy with new linux.
+
+Paths are platform and programmers-vision depended :P
+
+export PATH="${PATH}:/home/insofter/projects/buildroot/output/host/usr/bin"
+export PATH="${PATH}:/home/insofter/projects/buildroot/output/host/usr/sbin"
+

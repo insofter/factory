@@ -1,0 +1,124 @@
+Prerequisites
+
+This manual assumes that you use Ubuntu 12.04 i386 or x86_64 GNU/Linux distribution. All examples assumes that ~/project is your working directory.
+
+Install required packages:
+
+$ sudo apt-get install vim terminator git make gcc g++ cmake doxygen \
+ncurses-dev bison flex texinfo unzip uboot-mkimage minicom sqlite3 \
+libsqlite3-dev curl libcurl3-dev
+
+In order to compile any of icdtcp3 packages an appropriate cross compiler needs to be installed on yor machine. buildroot package compiles its own compiler during build process. So, one way to get a cross compiler is to build buildroot package first. Alternatively, you can download a  host-tools-i386.tar.bz2 or  host-tools-x86_64.tar.bz2 package from cattus:
+
+$ cd ~/projects
+$ wget --user trozensztrauch --ask-password https://www.cattus.info/files/host-tools-i386.tar.bz2
+$ tar -xvjf host-tools-i386.tar.bz2
+
+Add bin and sbin folders inside host-tools to ${PATH}, edit ~/.bashrc file:
+
+export PATH="${PATH}:${HOME}/projects/host-tools/usr/bin"
+export PATH="${PATH}:${HOME}/projects/host-tools/usr/sbin"
+
+or, if you chose to use cross compiler built by buildroot:
+
+export PATH="${PATH}:${HOME}/projects/buildroot/output/host/usr/bin"
+export PATH="${PATH}:${HOME}/projects/buildroot/output/host/usr/sbin"
+
+Download scripts repository, that contains icdtcp3 building tools:
+
+$ cd ~/projects
+$ git clone ssh://trozensztrauch@cattus.info/srv/git/scripts
+
+and add edit ~/.bashrc file again:
+
+export PATH="${PATH}:${HOME}/projects/scripts"
+export ICDTCP3_SCRIPTS_DIR="${HOME}/projects/scripts"
+export ICDTCP3_TARGET_ADDR="192.168.2.190"
+export ICDTCP3_TFTP_DIR="/srv/tftp"
+
+Icd
+
+Installing roxml xml parser library:
+
+$ cd ~/projects
+$ wget --user trozensztrauch --ask-password https://www.cattus.info/files/libroxml-2.1.2.tar.gz
+$ tar -xvzf libroxml-2.1.2.tar.gz
+$ cd libroxml-2.1.2
+$ make
+$ sudo make install
+
+Compilation:
+
+$ cd ~/projects
+$ git clone ssh://trozensztrauch@cattus.info/srv/git/icd
+$ cd icd
+$ cmake .
+$ make
+
+If you compile the package in this way you will be able to run the tools on your local machine. This may be handy during development and for testing. You can even install the package on local machine:
+
+ $ sudo make install
+
+This way you can have a device emulator, the only thing is you have to configure everything manually, e.g. set up databases, install lighttpd, start daemons (in emulation mode). In order to cross compile the package for target device, create toolchainfile.cmake file in ~/projects/icd directory with the following content:
+
+set(CMAKE_C_COMPILER /home/insofter/projects/host-tools/usr/bin/arm-unknown-linux-uclibcgnueabi-gcc)
+set(CMAKE_CXX_COMPILER /home/insofter/projects/host-tools/usr/bin/arm-unknown-linux-uclibcgnueabi-g++)
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -pipe -Os " CACHE STRING "Icd CFLAGS" FORCE)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pipe -Os " CACHE STRING "Icd CXXFLAGS" FORCE)
+set(CMAKE_INSTALL_SO_NO_EXE 0)
+set(CMAKE_PROGRAM_PATH "/home/insofter/projects/host-tools/usr/bin")
+set(CMAKE_FIND_ROOT_PATH "/home/insofter/projects/host-tools/usr/arm-unknown-linux-uclibcgnueabi/sysroot")
+set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
+set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
+set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
+set(ENV{PKG_CONFIG_SYSROOT_DIR} "/home/insofter/projects/host-tools/usr/arm-unknown-linux-uclibcgnueabi/sysroot")
+
+Again, you have to replace the paths in this example with the ones that you actually use.
+
+Then, compile with the following parameters:
+
+$ cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_TOOLCHAIN_FILE=.toolchainfile.cmake .
+$ make
+
+Create install binary package:
+
+$ make package
+
+And finaly you can update the device:
+
+$ ./make-target.sh icd-<version>-linux.sh
+
+The last command will connect to the target device as admin via ssh upload the installation packaage, and run it to replace all icd files.
+Linux kernel
+
+Compilation:
+
+$ git clone ssh://trozensztrauch@cattus.info/srv/git/linux
+
+Buildroot
+
+Compilation:
+
+$ cd ~/projects
+$ git clone ssh://trozensztrauch@cattus.info/srv/git/buildroot
+
+U-boot
+
+Compilation:
+
+$ cd ~/projects
+$ git clone ssh://trozensztrauch@cattus.info/srv/git/u-boot
+
+At91bootstrap
+
+Compilation
+
+$ cd ~/projects
+$ git clone ssh://trozensztrauch@cattus.info/srv/git/at91bootstrap
+$ cd at91bootstrap/board/icdtcp3
+$ make
+
+Updating device via tftp
+
+$ ./make-tftp.sh
+

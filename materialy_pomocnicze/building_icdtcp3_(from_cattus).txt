@@ -1,0 +1,55 @@
+Prerequisites
+
+This manual assumes that you use Ubuntu 12.04 i386 or x86_64 GNU/Linux distribution. All examples assumes that ~/project is your working directory and ~/work is a working directory for building scripts.
+
+Install required packages:
+
+$ sudo apt-get install vim terminator git make gcc g++ cmake doxygen \
+ncurses-dev bison flex texinfo unzip uboot-mkimage minicom sqlite3 \
+libsqlite3-dev curl libcurl3-dev
+
+Define envirnment Variables in your ~/.bashrc file:
+
+export ICDTCP3_WORKING_DIR="${HOME}/work"
+export ICDTCP3_BUILD_DIR="${HOME}/work/_BUILD"
+export ICDTCP3_SCRIPTS_DIR="${HOME}/projects/scripts"
+export ICDTCP3_GIT_ROOT="ssh://trozensztrauch@cattus.info/srv/git"
+export PATH="${PATH}:${HOME}/${ICDTCP3_BUILD_DIR}/host/usr/bin"
+export PATH="${PATH}:${HOME}/${ICDTCP3_BUILD_DIR}/host/usr/sbin"
+export PATH="${PATH}:${HOME}/projects/scripts"
+
+Replace login name (trozensztrauch) with your login to cattus.info. If you already have the repositories cloned onto the local machine you can use them instead of the remote ones. This may be also handy if you have made some changes to your local repository which are not yet available in the remote one. In this case change ICDTCP3_GIT_ROOT environment variable in ~/.bashrc, e.g.:
+
+export ICDTCP3_GIT_ROOT="${HOME}/projects"  
+
+Download scripts repository, that contains icdtcp3 building tools:
+
+$ cd ~/projects
+$ git clone ssh://trozensztrauch@cattus.info/srv/git/scripts
+
+Building Icdtcp3
+
+Clone buildroot repository:
+
+$ cd ~/projects
+$ git clone ssh://trozensztrauch@cattus.info/srv/git/buildroot
+
+Chose a version to build, e.g. v2011.11-icdtcp3-0.1:
+
+$ git checkout v2011.11-icdtcp3-0.1
+
+To build the latest version, chose icdtcp3-2011.11 (branch head):
+
+$ git checkout icdtcp3-2011.11
+
+Run icdtcp3 make:
+
+make icdtcp3_defconfig
+make
+make relpkg
+make updpkg
+
+After successful build you should find icdtcp3-<version>.tar.bz2 and icdtcp3-<version>.img files in the build directory.
+
+    icdtcp3-<version>.tar.bz2 is used for FactoryProgramming.
+    icdtcp3-<version>.img is used for SoftwareUpdate?. 

@@ -1,0 +1,18 @@
+Error Codes for icd-transfer-data
+
+Error values (Data should be send next time)
+
+    1 -- Server denied to process data because of previous error.
+    2 -- Data have to be send ( database code, set by icd-itd-daemon when the aggregation period is complete, the record will not be updated any more. Record can be removed if saved on flash )
+    3 -- Data have to be send ( database code, set by icd-itd-daemon when the aggregation period is not complete so the record may be still updated ) 
+
+    1XX -- Error, XX describes type of error 
+
+OK (Data accepted)
+
+    0 -- OK 
+
+Warnings
+
+    -2 -- Data marked as send by WWW interface
+    -1XX -- Data accepted, but .. -- XX describes type of warning 

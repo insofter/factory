@@ -1,0 +1,4 @@
+#20 	move contents of skeleton /home 	buildroot 	icdtcp3-0.0 	icdtcp3-1.0.0 	defect 		assigned 	08/20/2012
+#33 	/home partion files and dirs have wrong ownership/access rights 	buildroot 		icdtcp3-1.0.0 	defect 		new 	09/19/2012
+#40 	need more wifi drivers 	linux kernel 	icdtcp3-0.0 	icdtcp3-1.0.0 	enhancement 	trozensztrauch 	new 	12/13/2012
+#26 	enable rs232 	linux kernel 			task 	trozensztrauch 	new 	08/22/2012 
