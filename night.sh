@@ -130,8 +130,12 @@ cp ../night_${DATE}.all.log $MINILOG
 echo -e "\n\n======== make_1 ========\n\n" >>  $MINILOG
 cat ../night_${DATE}.make_1.log | tail -30 | awk '{print "    " $0}' >>  $MINILOG
 
-echo -e "\n\n======== make_2 ========\n\n" >>  $MINILOG
-cat ../night_${DATE}.make_2.log | tail -30 | awk '{print "    " $0}' >> $MINILOG
+if [ -e ../night_${DATE}.make_2.log ]; then
+
+  echo -e "\n\n======== make_2 ========\n\n" >>  $MINILOG
+  cat ../night_${DATE}.make_2.log | tail -30 | awk '{print "    " $0}' >> $MINILOG
+
+fi
 
 echo -e "\n\n======== make_relpkg ========\n\n" >>  $MINILOG
 cat ../night_${DATE}.make_relpkg.log | tail -30 | awk '{print "    " $0}' >> $MINILOG
