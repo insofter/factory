@@ -51,19 +51,7 @@ sr() {
     echo ssh root@192.168.$1
     ssh root@192.168.$1
   else
-    echo ssh root@192.168.2.199
-    ssh root@192.168.2.199
+    echo ssh root@192.168.123.100
+    ssh root@192.168.123.100
   fi
 }
-
-sa() {
-  if [ "$1" != "" ]
-  then
-    echo ssh admin@192.168.$1
-    ssh admin@192.168.$1
-  else
-    echo ssh admin@192.168.2.199
-    ssh admin@192.168.2.199
-  fi
-}
-
